@@ -1,2 +1,15 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.clr-primary {
+    color: #0091BD;
+}
+.clr-primary-bg {
+    background: #0091BD;
+}
+.clr-secondary {
+    color: #EF509C;
+}
+.clr-secondary-bg {
+    background: #EF509C;
+}
