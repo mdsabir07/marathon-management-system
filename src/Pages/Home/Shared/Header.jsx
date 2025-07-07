@@ -1,23 +1,46 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
+import UseAuth from '../../../hooks/UseAuth';
+import Swal from 'sweetalert2';
 
 const Header = () => {
+    const { user, signOutUser } = UseAuth();
+    const handleSignOut = () => {
+        signOutUser()
+            .then(res => {
+                const user = res.user;
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: `${user?.email} SignOut successful!`,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+            .catch(error => console.log(error));
+    }
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="marathons">Marathons</NavLink></li>
-        <li><NavLink to="signin">Login</NavLink></li>
-        <li><NavLink to="register">Register</NavLink></li>
-        {/* <li><NavLink to="dashboard">Dashboard</NavLink></li>
-        <li>
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-                <img
-                    alt="Tailwind CSS Navbar component"
-                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-            </div>
-        </div>
-        </li>
-         */}
+        {
+            user && <>
+                <li><NavLink to="marathons">Marathons</NavLink></li>
+                <li><NavLink to="dashboard">Dashboard</NavLink></li>
+                <li>
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <img
+                                alt="Tailwind CSS Navbar component"
+                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
+                    </div>
+                </li>
+            </>
+        }
+        {user ? <li><button onClick={handleSignOut} className='btn clr-primary-bg ml-0 lg:ml-4'>Logout</button></li> : <>
+            <li><NavLink to="signin">Login</NavLink></li>
+            <li><NavLink to="register">Register</NavLink></li>
+        </>}
+
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -38,7 +61,6 @@ const Header = () => {
                 <ul className="menu menu-horizontal hidden lg:flex px-1">
                     {links}
                 </ul>
-                <button className='btn hidden'>Logout</button>
             </div>
         </div>
     );

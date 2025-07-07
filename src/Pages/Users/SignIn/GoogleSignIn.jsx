@@ -14,7 +14,7 @@ const GoogleSignIn = ({ from }) => {
                 Swal.fire({
                     position: "center",
                     icon: "success",
-                    title: `${user} signIn successfully!`,
+                    title: `${user?.email} signIn successfully!`,
                     showConfirmButton: false,
                     timer: 1500
                 });

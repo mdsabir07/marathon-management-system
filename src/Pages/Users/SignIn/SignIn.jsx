@@ -26,7 +26,7 @@ const SignIn = () => {
                 Swal.fire({
                     position: "center",
                     icon: "success",
-                    title: `${user} signIn successfully!`,
+                    title: `${user?.email} SignIn successful!`,
                     showConfirmButton: false,
                     timer: 1500
                 });
