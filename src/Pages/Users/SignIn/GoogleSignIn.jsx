@@ -1,6 +1,32 @@
 import React from 'react';
+import UseAuth from '../../../hooks/UseAuth';
+import { useNavigate } from 'react-router';
+import Swal from 'sweetalert2';
 
-const GoogleSignIn = () => {
+const GoogleSignIn = ({ from }) => {
+    const { signInWithGoogle } = UseAuth();
+    const navigate = useNavigate();
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(res => {
+                const user = res.user;
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: `${user} signIn successfully!`,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate(from || '/');
+            })
+            .catch(error => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode, errorMessage);
+            })
+    }
+
     return (
         <>
             <div className="flex items-center pt-4 space-x-1">

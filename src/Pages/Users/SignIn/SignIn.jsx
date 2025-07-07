@@ -1,14 +1,42 @@
 import Lottie from 'lottie-react';
 import LottieSignIn from '../../../assets/Lotties/SignIn.json'
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
+import UseAuth from '../../../hooks/UseAuth';
+import Swal from 'sweetalert2';
+import { useState } from 'react';
+import GoogleSignIn from './GoogleSignIn';
 
 const SignIn = () => {
+    const { signInUser } = UseAuth();
+    const [err, setErr] = useState('');
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state || '/';
+
     const handleSignIn = e => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
         console.log({ email, password });
+
+        signInUser(email, password)
+            .then(res => {
+                const user = res.user;
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: `${user} signIn successfully!`,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate(from);
+            })
+            .catch(error => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                setErr(errorCode, errorMessage)
+            })
     }
     return (
         <div className="container mx-auto flex justify-center items-center flex-col md:flex-row gap-5 px-12 my-12">
@@ -27,9 +55,10 @@ const SignIn = () => {
                         </div>
                     </div>
                     <button type='submit' className="cursor-pointer block w-full p-3 text-center rounded-sm dark:text-gray-50 clr-primary-bg">Sign In</button>
+                    {err && <p className='text-red-500'>{err}</p>}
                 </form>
                 {/* Social login */}
-                {/* <GoogleSignIn from={from} /> */}
+                <GoogleSignIn from={from} />
                 <p className="text-xs text-center sm:px-6 dark:text-gray-600">Don't have an account?
                     <Link to="/register" className='clr-primary'><strong> Register</strong></Link>
                 </p>
