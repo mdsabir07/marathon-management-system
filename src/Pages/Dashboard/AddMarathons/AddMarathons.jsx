@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import axios from 'axios';
+import UseAuth from '../../../hooks/UseAuth';
+import { useNavigate } from 'react-router';
+import Swal from 'sweetalert2';
 
 const AddMarathons = () => {
+    const { user } = UseAuth();
+    const navigate = useNavigate();
+    // react date field data
     const [startRegDate, setStartRegDate] = useState(null);
     const [endRegDate, setEndRegDate] = useState(null);
     const [marathonDate, setMarathonDate] = useState(null);
@@ -12,14 +19,30 @@ const AddMarathons = () => {
         const form = e.target;
 
         const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-        console.log(data);
+        const formNewData = Object.fromEntries(formData.entries());
+        formNewData.email = user?.email;
+        console.log(formNewData);
+
+        axios.post(`${import.meta.env.VITE_API_URL}/add-marathon`, formNewData)
+            .then(data => {
+                console.log(data.data);
+                if(data.data.insertedId){
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Created Successful!',
+                        showConfirmButton: false,
+                        timer: 1500,
+                    });
+                } 
+                // navigate('/My-Marathons-List')
+            })
+            .catch(error => console.log(error));
     }
     return (
         <div className='px-28 py-18'>
             <div className='px-18 text-center'>
                 <h1 className='text-5xl font-bold'>Add New Marathon</h1>
-                <p className='text-lg my-5'>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
+                <p className='text-lg my-5'>It is a well-known fact that organizers can be distracted by the visible layout of a system when managing a marathon. The benefit of using the Marathon Management System is that it provides a more structured and intuitive interface, as opposed to using generic tools or placeholder content.</p>
             </div>
 
             <form onSubmit={handleAddMarathon} className="flex flex-col mx-auto space-y-12">
