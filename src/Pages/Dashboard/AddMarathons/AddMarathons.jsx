@@ -86,8 +86,8 @@ const AddMarathons = () => {
                     </div>
 
                     <div className="col-span-full sm:col-span-6">
-                        <label htmlFor="run-distance" className="text-sm">Running distance</label>
-                        <select defaultValue="Select a Running distance" name='run-distance' className="w-full border border-gray-700 focus:outline-0 p-3 rounded">
+                        <label htmlFor="runDistance" className="text-sm">Running distance</label>
+                        <select defaultValue="Select a Running distance" name='runDistance' className="w-full border border-gray-700 focus:outline-0 p-3 rounded">
                             <option disabled={true}>Select a Running distance</option>
                             <option value="25k">25k</option>
                             <option value="10k">10k</option>

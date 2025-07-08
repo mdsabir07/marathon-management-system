@@ -37,8 +37,13 @@ const router = createBrowserRouter([
                 }
             },
             {
-                path: 'Marathon-Details',
-                Component: MarathonDetails
+                path: 'marathon/:id',
+                element: <PrivateRoute><MarathonDetails /></PrivateRoute>,
+                hydrateFallbackElement: <Loading />,
+                loader: async ({ params }) => {
+                    const res = await axios.get(`${import.meta.env.VITE_API_URL}/marathon/${params.id}`);
+                    return res.data;
+                }
             },
             {
                 path: 'dashboard',
