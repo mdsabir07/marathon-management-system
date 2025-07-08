@@ -11,6 +11,7 @@ import MyApplyList from "../Pages/Dashboard/MyApplyList/MyApplyList";
 import DashboardLayout from "../layout/DashboardLayout";
 import axios from "axios";
 import Loading from "../Pages/Home/Shared/Loading";
+import PrivateRoute from "../routers/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,12 @@ const router = createBrowserRouter([
             },
             {
                 path: 'marathons',
-                Component: Marathons
+                element: <PrivateRoute><Marathons /></PrivateRoute>,
+                hydrateFallbackElement: <Loading />,
+                loader: async () => {
+                    const res = await axios.get(`${import.meta.env.VITE_API_URL}/marathons`);
+                    return res.data;
+                }
             },
             {
                 path: 'Marathon-Details',

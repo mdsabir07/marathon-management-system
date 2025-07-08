@@ -1,9 +1,19 @@
-import React from 'react';
+import { useLoaderData } from 'react-router';
+import MarathonCard from '../Home/Shared/MarathonCard';
 
 const Marathons = () => {
+    const marathons = useLoaderData();
+
     return (
-        <div>
-            Marathons
+        <div className="w-11/12 mx-auto py-10">
+            <h1 className='text-3xl mb-8'>Total marathon:<strong className='clr-secondary'> {marathons.length}</strong></h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {
+                    marathons.map(marathon => (
+                        <MarathonCard key={marathon._id} marathon={marathon} />
+                    ))
+                }
+            </div>
         </div>
     );
 };
