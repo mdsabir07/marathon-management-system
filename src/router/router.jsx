@@ -9,6 +9,8 @@ import AddMarathons from "../Pages/Dashboard/AddMarathons/AddMarathons";
 import MyMarathonsList from "../Pages/Dashboard/MyMarathonsList/MyMarathonsList";
 import MyApplyList from "../Pages/Dashboard/MyApplyList/MyApplyList";
 import DashboardLayout from "../layout/DashboardLayout";
+import axios from "axios";
+import Loading from "../Pages/Home/Shared/Loading";
 
 const router = createBrowserRouter([
     {
@@ -17,7 +19,12 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                Component: Home
+                Component: Home,
+                hydrateFallbackElement: <Loading />,
+                loader: async () => {
+                    const res = await axios.get(`${import.meta.env.VITE_API_URL}/marathons?limit=6`);
+                    return res.data;
+                }
             },
             {
                 path: 'marathons',
@@ -55,5 +62,5 @@ const router = createBrowserRouter([
             }
         ]
     }
-])
+]);
 export default router;

@@ -9,8 +9,8 @@ const Footer = () => {
         <NavLink to="register">Register</NavLink>
     </>
     return (
-        <footer className="bg-base-200 text-base-content p-10">
-            <div className="flex flex-col md:flex-row gap-5 md:gap-8 justify-between">
+        <footer className="bg-base-200 text-base-content py-10">
+            <div className="w-11/12 mx-auto flex flex-col md:flex-row gap-5 md:gap-8 justify-between">
                 <aside>
                     <svg
                         width="50"

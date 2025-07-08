@@ -9,8 +9,7 @@ const DashboardLayout = () => {
                     <NavLink
                         to="add-marathons"
                         className={({ isActive }) =>
-                            `flex items-center gap-2 p-2 rounded ${isActive ? 'clr-primary-bg' : ''
-                            }`
+                            `flex items-center text-xl gap-2 p-2 rounded ${isActive ? 'clr-primary-bg' : ''}`
                         }
                     >
                         Add Marathon
@@ -18,8 +17,7 @@ const DashboardLayout = () => {
                     <NavLink
                         to="my-marathons-list"
                         className={({ isActive }) =>
-                            `flex items-center gap-2 p-2 rounded ${isActive ? 'clr-primary-bg' : ''
-                            }`
+                            `flex items-center text-xl gap-2 p-2 rounded ${isActive ? 'clr-primary-bg' : ''}`
                         }
                     >
                         My Marathon List
@@ -27,8 +25,7 @@ const DashboardLayout = () => {
                     <NavLink
                         to="my-apply-list"
                         className={({ isActive }) =>
-                            `flex items-center gap-2 p-2 rounded ${isActive ? 'clr-primary-bg' : ''
-                            }`
+                            `flex items-center text-xl gap-2 p-2 rounded ${isActive ? 'clr-primary-bg' : ''}`
                         }
                     >
                         My Apply List

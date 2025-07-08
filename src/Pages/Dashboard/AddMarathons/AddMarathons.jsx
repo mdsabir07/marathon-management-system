@@ -107,7 +107,7 @@ const AddMarathons = () => {
 
                     <div className="col-span-full">
                         <label htmlFor="marathon-img" className="text-sm">Marathon Image</label>
-                        <input name='marathon-img' type="url" className="w-full border border-gray-700 focus:outline-0 p-3 rounded" />
+                        <input name='marathon_img' type="url" className="w-full border border-gray-700 focus:outline-0 p-3 rounded" />
                     </div>
 
                     <button type="submit" className="cursor-pointer px-8 col-span-full text-xl py-3 w-full font-semibold rounded clr-primary-bg">Add Marathon</button>
