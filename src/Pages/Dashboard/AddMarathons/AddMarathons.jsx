@@ -3,12 +3,12 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
 import UseAuth from '../../../hooks/UseAuth';
-import { useNavigate } from 'react-router';
+// import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 
 const AddMarathons = () => {
     const { user } = UseAuth();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     // react date field data
     const [startRegDate, setStartRegDate] = useState(null);
     const [endRegDate, setEndRegDate] = useState(null);
@@ -34,7 +34,7 @@ const AddMarathons = () => {
                         timer: 1500,
                     });
                 } 
-                navigate('/My-Marathons-List')
+                // navigate('my-marathons-list')
             })
             .catch(error => console.log(error));
     }

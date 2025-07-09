@@ -1,5 +1,4 @@
 import { useState } from "react";
-import axios from 'axios';
 import UseAuth from "../../../hooks/UseAuth";
 import { useEffect } from "react";
 import Loading from "../../Home/Shared/Loading";
@@ -14,7 +13,6 @@ const MyApplyList = () => {
     const [applications, setApplications] = useState([]);
     const [selectedApplication, setSelectedApplication] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    console.log(applications)
 
     const fetchApplications = useCallback(async () => {
         if (!user?.email) return;
@@ -85,8 +83,6 @@ const MyApplyList = () => {
             console.error("Update failed", err);
             Swal.fire("Failed to save!", err?.response?.data?.message || "Something went wrong.", "error");
         }
-
-        console.log("Updating with ID:", updatedData._id);
     };
 
 
@@ -113,7 +109,7 @@ const MyApplyList = () => {
                     </colgroup>
                     <thead className="">
                         <tr className="text-left border-b border-opacity-20 border-gray-700">
-                            <th className="p-3">No.</th>
+                            <th className="p-3">#</th>
                             <th className="p-3">Marathon Title</th>
                             <th className="p-3">Name</th>
                             <th className="p-3">Start date</th>
