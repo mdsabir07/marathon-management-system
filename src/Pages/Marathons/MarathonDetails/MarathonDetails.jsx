@@ -26,7 +26,7 @@ const MarathonDetails = () => {
                     <p>{description}</p>
                 </div>
 
-                <Link to={`/JobApply/${_id}`} className="relative px-8 py-4 flex justify-center items-center overflow-hidden font-semibold rounded clr-primary-bg">Apply now
+                <Link to={`/marathon-registration/${_id}`} className="relative px-8 py-4 flex justify-center items-center overflow-hidden font-semibold rounded clr-primary-bg">Apply now
                 </Link>
             </article>
         </div>

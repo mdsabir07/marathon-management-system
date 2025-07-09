@@ -12,6 +12,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import axios from "axios";
 import Loading from "../Pages/Home/Shared/Loading";
 import PrivateRoute from "../routers/PrivateRoute";
+import MarathonRegistration from "../Pages/MarathonRegistration/MarathonRegistration";
 
 const router = createBrowserRouter([
     {
@@ -47,21 +48,33 @@ const router = createBrowserRouter([
             },
             {
                 path: 'dashboard',
-                Component: DashboardLayout,
+                element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
                 children: [
                     {
                         path: 'add-marathons',
-                        Component: AddMarathons
+                        element: <PrivateRoute><AddMarathons /></PrivateRoute>
                     },
                     {
                         path: 'my-marathons-list',
-                        Component: MyMarathonsList
+                        element: <PrivateRoute><MyMarathonsList /></PrivateRoute>
                     },
                     {
                         path: 'my-apply-list',
-                        Component: MyApplyList
+                        element: <PrivateRoute><MyApplyList /></PrivateRoute>,
+                        hydrateFallbackElement: <Loading />,
+                        loader: async () => { return null }
                     }
                 ]
+            },
+
+            {
+                path: 'marathon-registration/:id',
+                element: <PrivateRoute><MarathonRegistration /></PrivateRoute>,
+                hydrateFallbackElement: <Loading />,
+                loader: async ({ params }) => {
+                    const res = await axios.get(`${import.meta.env.VITE_API_URL}/marathon/${params.id}`);
+                    return res.data;
+                }
             },
             {
                 path: 'signin',
