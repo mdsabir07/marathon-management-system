@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate } from "react-router";
+import { useLoaderData } from "react-router";
 import UseAuth from "../../hooks/UseAuth";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const MarathonRegistration = () => {
     const marathon = useLoaderData();
     const { user } = UseAuth();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const handleRegisterMarathon = async (e) => {
         e.preventDefault();
@@ -33,7 +33,7 @@ const MarathonRegistration = () => {
                     showConfirmButton: false,
                     timer: 1500,
                 });
-                navigate('my-apply-list');
+                // navigate('my-apply-list');
             }
         } catch (error) {
             console.error('Error submitting application:', error);
@@ -46,7 +46,7 @@ const MarathonRegistration = () => {
         }
     }
     return (
-        <div className=''>
+        <div className='w-11/12 mx-auto py-10'>
             <div className='px-18 text-center'>
                 <h1 className='text-5xl font-bold'>Registering for: {marathon.title}</h1>
                 {/* ✅ Display total registration count */}

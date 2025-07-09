@@ -32,12 +32,10 @@ const MyMarathonsList = () => {
             showCancelButton: true,
             confirmButtonText: "Yes, delete it!",
         });
-
         if (!result.isConfirmed) return;
-
         try {
             await deleteMarathon(marathon._id);
-            await fetchMarathons(); // refresh UI
+            await fetchMarathons(); 
             Swal.fire("Deleted!", "Marathon deleted successfully.", "success");
         } catch (err) {
             console.error("Delete failed", err);
@@ -64,7 +62,6 @@ const MyMarathonsList = () => {
 
         try {
             const { _id, ...updatePayload } = updatedData;
-
             const res = await updateMarathon(_id, updatePayload);
 
             // Update local state with the updated marathon
@@ -83,10 +80,6 @@ const MyMarathonsList = () => {
             );
         }
     };
-
-
-
-    console.log(marathons)
 
     if (loading) return <Loading />;
 

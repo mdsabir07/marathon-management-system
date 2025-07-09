@@ -3,9 +3,9 @@ import axios from "axios";
 const BASE_URL = import.meta.env.VITE_API_URL;
 
 // Applications api
-export const getApplications = (email) =>
-    axios.get(`${BASE_URL}/my-applications/${email}`);
-
+export const getApplications = (email, query = "") => {
+    return axios.get(`${BASE_URL}/my-applications/${email}${query}`);
+}
 export const updateApplication = (id, data) =>
     axios.put(`${BASE_URL}/update/application/${id}`, data);
 

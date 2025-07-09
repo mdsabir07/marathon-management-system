@@ -13,16 +13,18 @@ const MyApplyList = () => {
     const [applications, setApplications] = useState([]);
     const [selectedApplication, setSelectedApplication] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [searchTitle, setSearchTitle] = useState("");
 
     const fetchApplications = useCallback(async () => {
         if (!user?.email) return;
         try {
-            const res = await getApplications(user.email);
+            const query = searchTitle ? `?title=${encodeURIComponent(searchTitle)}` : "";
+            const res = await getApplications(user.email, query);
             setApplications(res.data);
         } catch (err) {
             console.error('Error loading applications:', err);
         }
-    }, [user?.email]);
+    }, [user?.email, searchTitle]);
 
 
     useEffect(() => {
@@ -40,7 +42,6 @@ const MyApplyList = () => {
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
         });
-
         if (!result.isConfirmed) return;
 
         try {
@@ -68,14 +69,12 @@ const MyApplyList = () => {
             confirmButtonText: "Save",
             denyButtonText: `Don't save`,
         });
-
         if (!result.isConfirmed) return;
 
         try {
-            const { _id, ...dataToUpdate } = updatedData; // 🔥 Exclude _id from update body
-
-            await updateApplication(_id, dataToUpdate);    // Send only update fields
-            await fetchApplications();                     // Refresh UI from backend
+            const { _id, ...dataToUpdate } = updatedData;
+            await updateApplication(_id, dataToUpdate);
+            await fetchApplications();
             setIsModalOpen(false);
 
             Swal.fire("Saved!", "", "success");
@@ -85,18 +84,39 @@ const MyApplyList = () => {
         }
     };
 
-
-
-
-
-
-
     if (loading) return <Loading />;
     return (
         <>
             <h2 className="mb-4 text-2xl clr-secondary leading-tight">
                 Total applied: <strong>{applications.length}</strong>
             </h2>
+            <div className="mb-4 flex gap-2 items-center">
+                <input
+                    type="text"
+                    placeholder="Search by Marathon Title"
+                    className="input focus:outline-0 input-bordered w-full max-w-xs"
+                    value={searchTitle}
+                    onChange={(e) => setSearchTitle(e.target.value)}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter") fetchApplications();
+                    }}
+                />
+                <button
+                    className="btn clr-primary-bg"
+                    onClick={fetchApplications}
+                >
+                    Search
+                </button>
+                <button
+                    className="btn clr-secondary-bg"
+                    onClick={() => {
+                        setSearchTitle("");
+                        fetchApplications();
+                    }}
+                >
+                    Clear
+                </button>
+            </div>
             <div className="overflow-x-auto">
                 <table className="min-w-full">
                     <colgroup>
