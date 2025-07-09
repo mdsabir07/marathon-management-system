@@ -1,5 +1,5 @@
-const ApplyRow = ({ application, index }) => {
-    const { marathonId, marathonTitle, marathonDate, firstName, lastName, email, contact, additionalInfo } = application || {};
+const ApplyRow = ({ index, application, onUpdate, onDelete }) => {
+    const { marathonTitle, marathonDate, firstName, lastName, email, contact, additionalInfo } = application || {};
     return (
         <tr className="border-b border-opacity-20 border-gray-700">
             <td className="p-2">
@@ -9,7 +9,7 @@ const ApplyRow = ({ application, index }) => {
                 <p>{marathonTitle}</p>
             </td>
             <td className="p-2">
-                <p>{firstName} {lastName}</p>
+                <p>{firstName}<span> {lastName}</span></p>
             </td>
             <td className="p-2 clr-secondary">
                 <p>{marathonDate}</p>
@@ -21,10 +21,17 @@ const ApplyRow = ({ application, index }) => {
                 <p>{contact}</p>
                 <p>{email}</p>
             </td>
-            <td className="p-2 text-right">
-                <span className="px-3 py-1 font-semibold rounded-md clr-primary-bg">
-                    <span>Pending</span>
-                </span>
+            <td className="p-2 grid gap-3 justify-end items-center">
+                <button 
+                onClick={() => onUpdate(application)}
+                className="btn rounded-md clr-primary-bg cursor-pointer">
+                    Update
+                </button>
+                <button 
+                onClick={() => onDelete(application)}
+                className="btn rounded-md bg-red-500 cursor-pointer">
+                    Delete
+                </button>
             </td>
         </tr>
     );
