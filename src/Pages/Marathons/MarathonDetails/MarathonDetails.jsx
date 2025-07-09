@@ -1,10 +1,15 @@
+import { useEffect } from "react";
 import { Link, useLoaderData } from "react-router";
 
 
 const MarathonDetails = () => {
     const marathon = useLoaderData();
     console.log(marathon);
-    const { _id, marathon_img, title, startRegDate, endRegDate, marathonDate, runDistance, location, description, email } = marathon || {};
+    const { _id, marathon_img, title, startRegDate, endRegDate, marathonDate, runDistance, location, description } = marathon || {};
+
+    useEffect(() => {
+        document.title = `${marathon.title} - Marathon Management System`;
+    }, [])
     return (
         <div className="max-w-5xl px-6 py-16 mx-auto space-y-12">
             <article className="space-y-8">

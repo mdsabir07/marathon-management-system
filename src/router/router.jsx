@@ -13,6 +13,7 @@ import axios from "axios";
 import Loading from "../Pages/Home/Shared/Loading";
 import PrivateRoute from "../routers/PrivateRoute";
 import MarathonRegistration from "../Pages/MarathonRegistration/MarathonRegistration";
+import Error404 from "../Pages/Error404";
 
 const router = createBrowserRouter([
     {
@@ -26,7 +27,8 @@ const router = createBrowserRouter([
                 loader: async () => {
                     const res = await axios.get(`${import.meta.env.VITE_API_URL}/marathons?limit=6`);
                     return res.data;
-                }
+                },
+                handle: { title: 'Home - Marathon Management System' }
             },
             {
                 path: 'marathons',
@@ -35,7 +37,8 @@ const router = createBrowserRouter([
                 loader: async () => {
                     const res = await axios.get(`${import.meta.env.VITE_API_URL}/marathons`);
                     return res.data;
-                }
+                },
+                handle: { title: 'Marathons - Marathon Management System' }
             },
             {
                 path: 'marathon/:id',
@@ -44,25 +47,30 @@ const router = createBrowserRouter([
                 loader: async ({ params }) => {
                     const res = await axios.get(`${import.meta.env.VITE_API_URL}/marathon/${params.id}`);
                     return res.data;
-                }
+                },
+                handle: { title: 'Marathon details - Marathon Management System' }
             },
             {
                 path: 'dashboard',
                 element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
+                handle: { title: 'Dashboard - Marathon Management System' },
                 children: [
                     {
                         path: 'add-marathons',
-                        element: <PrivateRoute><AddMarathons /></PrivateRoute>
+                        element: <PrivateRoute><AddMarathons /></PrivateRoute>,
+                        handle: { title: 'Add marathon - Marathon Management System' }
                     },
                     {
                         path: 'my-marathons-list',
-                        element: <PrivateRoute><MyMarathonsList /></PrivateRoute>
+                        element: <PrivateRoute><MyMarathonsList /></PrivateRoute>,
+                        handle: { title: 'My marathon list - Marathon Management System' }
                     },
                     {
                         path: 'my-apply-list',
                         element: <PrivateRoute><MyApplyList /></PrivateRoute>,
                         hydrateFallbackElement: <Loading />,
-                        loader: async () => { return null }
+                        loader: async () => { return null },
+                        handle: { title: 'My apply list - Marathon Management System' }
                     }
                 ]
             },
@@ -74,15 +82,23 @@ const router = createBrowserRouter([
                 loader: async ({ params }) => {
                     const res = await axios.get(`${import.meta.env.VITE_API_URL}/marathon/${params.id}`);
                     return res.data;
-                }
+                },
+                handle: { title: 'Marathon registration - Marathon Management System' }
             },
             {
                 path: 'signin',
-                Component: SignIn
+                Component: SignIn,
+                handle: { title: 'Sign In - Marathon Management System' }
             },
             {
                 path: 'register',
-                Component: Register
+                Component: Register,
+                handle: { title: 'Register - Marathon Management System' }
+            },
+            {
+                path: '*',
+                Component: Error404,
+                handle: { title: '404 - Marathon Management System' }
             }
         ]
     }

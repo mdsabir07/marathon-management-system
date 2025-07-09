@@ -1,6 +1,14 @@
-import { NavLink, Outlet } from 'react-router';
+import { useEffect } from 'react';
+import { NavLink, Outlet, useMatches } from 'react-router';
 
 const DashboardLayout = () => {
+    const matchs = useMatches();
+    useEffect(() => {
+        const matchWithTitle = [...matchs].reverse().find(match => match.handle?.title);
+        if (matchWithTitle) {
+            document.title = matchWithTitle.handle.title;
+        }
+    }, [matchs])
     return (
         <div className="flex flex-col sm:flex-row gap-5 sm:gap-8 w-11/12 mx-auto py-16 sm:py-30">
             {/* Sidebar */}
