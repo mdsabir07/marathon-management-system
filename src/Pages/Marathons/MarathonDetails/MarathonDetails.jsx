@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link, useLoaderData, useNavigate } from "react-router";
+import CountdownTimer from "../../Home/Shared/CountdownTimer";
 
 
 const MarathonDetails = () => {
@@ -9,7 +10,6 @@ const MarathonDetails = () => {
 
     // State to manage button disabled state
     const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
-    const navigate = useNavigate();
     useEffect(() => {
         document.title = `${marathon.title} - Marathon Management System`;
 
@@ -28,13 +28,6 @@ const MarathonDetails = () => {
         }
     }, [marathon]);
 
-
-    // Handle the registration click
-    const handleRegisterClick = (e) => {
-        if (!isRegistrationOpen) {
-            e.preventDefault(); // Prevent navigation if registration is closed
-        }
-    };
     return (
         <div className="max-w-5xl px-6 py-16 mx-auto space-y-12">
             <article className="space-y-8">
@@ -73,6 +66,10 @@ const MarathonDetails = () => {
                 )}
 
             </article>
+            <section className="my-10">
+                <h2 className="text-3xl sm:text-5xl font-bold mb-5 sm:mb-8 clr-secondary text-center">Marathon Countdown</h2>
+                <CountdownTimer marathonDate={marathonDate} />
+            </section>
         </div>
     );
 };
