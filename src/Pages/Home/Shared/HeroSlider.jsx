@@ -10,12 +10,12 @@ const HeroSlider = () => {
             <div id="slide1" className="carousel-item relative w-full">
                 <div className="container flex flex-col justify-center gap-8 p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                     <div className="flex flex-col justify-center text-center rounded-sm lg:text-left flex-1">
-                        <h1 className="text-4xl font-bold leading-none sm:text-6xl">Event Registration and Participant Management
+                        <h1 className="text-3xl font-bold leading-none sm:text-6xl">Event Registration and Participant Management
                         </h1>
                         <p className="mt-6 mb-8 text-base sm:text-lg sm:mb-12">Efficiently handle participant registrations with real-time updates. The system allows participants to register, modify details, and track their progress throughout the marathon.
                         </p>
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Read more</a>
+                            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded clr-primary-bg">Read more</a>
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
@@ -30,12 +30,12 @@ const HeroSlider = () => {
             <div id="slide2" className="carousel-item relative w-full">
                 <div className="container flex flex-col justify-center gap-8 p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                     <div className="flex flex-col justify-center text-center rounded-sm lg:text-left flex-1">
-                        <h1 className="text-4xl font-bold leading-none sm:text-6xl">Race Day Logistics and Tracking
+                        <h1 className="text-3xl font-bold leading-none sm:text-6xl">Race Day Logistics and Tracking
                         </h1>
                         <p className="mt-6 mb-8 text-base sm:text-lg sm:mb-12">Manage race-day activities seamlessly, including route mapping, timing systems, and live tracking of runners. Keep spectators and organizers informed with real-time updates on runners' locations and progress.
                         </p>
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Read more</a>
+                            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded clr-primary-bg">Read more</a>
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
@@ -50,12 +50,12 @@ const HeroSlider = () => {
             <div id="slide3" className="carousel-item relative w-full">
                 <div className="container flex flex-col justify-center gap-8 p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                     <div className="flex flex-col justify-center text-center rounded-sm lg:text-left flex-1">
-                        <h1 className="text-4xl font-bold leading-none sm:text-6xl">Volunteer and Staff Coordination
+                        <h1 className="text-3xl font-bold leading-none sm:text-6xl">Volunteer and Staff Coordination
                         </h1>
                         <p className="mt-6 mb-8 text-base sm:text-lg sm:mb-12">Coordinate volunteer assignments, staff roles, and shift schedules for a smooth event operation. The system ensures optimal support for participants and spectators throughout the race.
                         </p>
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Read more</a>
+                            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded clr-primary-bg">Read more</a>
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
@@ -70,12 +70,12 @@ const HeroSlider = () => {
             <div id="slide4" className="carousel-item relative w-full">
                 <div className="container flex flex-col justify-center gap-8 p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                     <div className="flex flex-col justify-center text-center rounded-sm lg:text-left flex-1">
-                        <h1 className="text-4xl font-bold leading-none sm:text-6xl">Results and Analytics Dashboard
+                        <h1 className="text-3xl font-bold leading-none sm:text-6xl">Results and Analytics Dashboard
                         </h1>
                         <p className="mt-6 mb-8 text-base sm:text-lg sm:mb-12">Post-race, the system compiles detailed results, times, and rankings for each participant. Access analytics for performance reviews, participant demographics, and overall event success.
                         </p>
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Read more</a>
+                            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded clr-primary-bg">Read more</a>
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">

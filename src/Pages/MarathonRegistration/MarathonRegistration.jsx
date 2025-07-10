@@ -47,8 +47,8 @@ const MarathonRegistration = () => {
     }
     return (
         <div className='w-11/12 mx-auto py-10'>
-            <div className='px-18 text-center'>
-                <h1 className='text-5xl font-bold'>Registering for: {marathon.title}</h1>
+            <div className='text-center'>
+                <h1 className='text-3xl sm:text-5xl font-bold'>Registering for: <span className="clr-primary">{marathon.title}</span></h1>
                 {/* ✅ Display total registration count */}
                 <p className="text-lg clr-secondary py-5">
                     Total Registrations: <span className="font-semibold">{marathon.totalRegistrationCount || 0}</span>

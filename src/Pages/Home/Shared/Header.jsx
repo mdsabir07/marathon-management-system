@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import UseAuth from '../../../hooks/UseAuth';
 import Swal from 'sweetalert2';
 
@@ -55,7 +55,11 @@ const Header = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <Link to="/" className="flex items-center font-bold">
+                        <span className='clr-secondary text-3xl'>M</span>
+                        <span className='clr-primary'>MARATHON</span>
+                        <span className='clr-secondary text-3xl'>S</span>
+                    </Link>
                 </div>
                 <div className="navbar-end">
                     <ul className="menu menu-horizontal hidden lg:flex px-1">

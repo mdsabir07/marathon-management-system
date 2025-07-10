@@ -40,8 +40,8 @@ const AddMarathons = () => {
     }
     return (
         <div className=''>
-            <div className='px-18 text-center'>
-                <h1 className='text-5xl font-bold'>Add New Marathon</h1>
+            <div className='text-center'>
+                <h1 className='text-3xl sm:text-5xl font-bold'>Add New Marathon</h1>
                 <p className='text-lg my-5'>It is a well-known fact that organizers can be distracted by the visible layout of a system when managing a marathon. The benefit of using the Marathon Management System is that it provides a more structured and intuitive interface, as opposed to using generic tools or placeholder content.</p>
             </div>
 
