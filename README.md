@@ -1,12 +1,50 @@
-# React + Vite
+🏃 Marathon Management System
+Welcome to the Marathon Management System — a responsive web application built to simplify the organization and participation experience of marathon events. Whether you're an event organizer, a runner, or a volunteer, this platform empowers you to manage marathons efficiently from start to finish.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Website: https://assign11-marathon.web.app/
 
-Currently, two official plugins are available:
+✨ Features
+* ✅ User Authentication & Authorization
+* Secure login system powered by Firebase.
+* Role-based access control for organizers, runners, and admins.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* 🌓 Dark/Light Theme Toggle
+* Real-time switch between dark and light modes using daisyUI.
 
-## Expanding the ESLint configuration
+* 📱 Fully Responsive Design
+* Seamless experience across devices using Tailwind CSS.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* 📋 Dynamic Marathon Event Management
+* Create, edit, and manage marathon events and race details.
+* Runners can register for events, view their profiles, and check results.
+
+* 🛰️ Real-Time Race Progress Tracking (New Feature)
+* Live GPS-based progress tracking for runners using integrated APIs.
+* Organizers and viewers can follow participants' progress in real-time.
+
+* 🎯 Enhanced UX with Modern Tools
+* Real-time alerts and feedback using sweetalert2.
+* Clean interface with react-icons.
+* Carousels and announcements using swiper.js.
+
+* 🛠️ Built With
+* React
+* React Router DOM
+* Firebase Auth
+* Axios
+* MongoDB (via backend API)
+* Tailwind CSS + DaisyUI
+* Mamba UI Component
+* SweetAlert2
+* React Icons
+* Dark/Light Theme Toggle
+
+* 🔐 Security
+* Sensitive credentials managed with environment variables.
+* User roles ensure only authorized actions for each account type.
+
+* 📱 Responsive Views
+* Tested and optimized for:
+📱 Mobile
+💻 Desktop
+📲 Tablets
