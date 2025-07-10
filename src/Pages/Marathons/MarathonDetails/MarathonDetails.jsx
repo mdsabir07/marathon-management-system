@@ -15,22 +15,19 @@ const MarathonDetails = () => {
 
         const setToMidnight = (date) => {
             const d = new Date(date);
-            d.setHours(0, 0, 0, 0); // Set time to midnight
+            d.setHours(0, 0, 0, 0);
             return d;
         };
 
-        // Parse the registration dates
-        const startDate = setToMidnight(startRegDate);
-        const endDate = setToMidnight(endRegDate);
-        const currentDate = setToMidnight(new Date()); // Current date set to midnight
+        if (startRegDate && endRegDate) {
+            const startDate = setToMidnight(startRegDate);
+            const endDate = setToMidnight(endRegDate);
+            const currentDate = setToMidnight(new Date());
 
-        // Check if the current date is between the start and end registration dates
-        if (currentDate >= startDate && currentDate <= endDate) {
-            setIsRegistrationOpen(true);
-        } else {
-            setIsRegistrationOpen(false);
+            setIsRegistrationOpen(currentDate >= startDate && currentDate <= endDate);
         }
     }, [marathon]);
+
 
     // Handle the registration click
     const handleRegisterClick = (e) => {
@@ -63,7 +60,6 @@ const MarathonDetails = () => {
                     <Link
                         to={`/marathon-registration/${_id}`}
                         className="relative px-8 py-4 flex justify-center items-center overflow-hidden font-semibold rounded clr-primary-bg"
-                        onClick={handleRegisterClick}
                     >
                         Apply now
                     </Link>
@@ -75,6 +71,7 @@ const MarathonDetails = () => {
                         Registration Closed
                     </button>
                 )}
+
             </article>
         </div>
     );
