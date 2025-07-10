@@ -8,13 +8,13 @@ Welcome to the Marathon Management System — a responsive web application built
 * Secure login system powered by Firebase.
 * Role-based access control for organizers, runners, and admins.
 
-* 🌓 Dark/Light Theme Toggle
+🌓 Dark/Light Theme Toggle
 * Real-time switch between dark and light modes using daisyUI.
 
-* 📱 Fully Responsive Design
+📱 Fully Responsive Design
 * Seamless experience across devices using Tailwind CSS.
 
-* 📋 Dynamic Marathon Event Management
+📋 Dynamic Marathon Event Management
 * Create, edit, and manage marathon events and race details.
 * Runners can register for events, view their profiles, and check results.
 
@@ -22,12 +22,12 @@ Welcome to the Marathon Management System — a responsive web application built
 * Live GPS-based progress tracking for runners using integrated APIs.
 * Organizers and viewers can follow participants' progress in real-time.
 
-* 🎯 Enhanced UX with Modern Tools
+🎯 Enhanced UX with Modern Tools
 * Real-time alerts and feedback using sweetalert2.
 * Clean interface with react-icons.
 * Carousels and announcements using swiper.js.
 
-* 🛠️ Built With
+🛠️ Built With
 * React
 * React Router DOM
 * Firebase Auth
@@ -39,11 +39,11 @@ Welcome to the Marathon Management System — a responsive web application built
 * React Icons
 * Dark/Light Theme Toggle
 
-* 🔐 Security
+🔐 Security
 * Sensitive credentials managed with environment variables.
 * User roles ensure only authorized actions for each account type.
 
-* 📱 Responsive Views
+📱 Responsive Views
 * Tested and optimized for:
 📱 Mobile
 💻 Desktop

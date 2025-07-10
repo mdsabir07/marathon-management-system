@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router';
 import UseAuth from '../../../hooks/UseAuth';
 import Swal from 'sweetalert2';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
     const { user, signOutUser } = UseAuth();
@@ -42,7 +43,7 @@ const Header = () => {
 
     </>
     return (
-        <div className="navbar bg-base-100 shadow-sm sm:gap-8">
+        <div className="navbar shadow-sm sm:gap-8">
             <div className="w-11/12 mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -65,6 +66,7 @@ const Header = () => {
                     <ul className="menu menu-horizontal hidden lg:flex px-1">
                         {links}
                     </ul>
+                    <ThemeToggle />
                 </div>
             </div>
         </div>

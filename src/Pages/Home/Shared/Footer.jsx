@@ -8,7 +8,7 @@ const Footer = () => {
         <NavLink to="register">Register</NavLink>
     </>
     return (
-        <footer className="bg-base-200 text-base-content py-10">
+        <footer className="py-10">
             <div className="w-11/12 mx-auto flex flex-col md:flex-row gap-5 md:gap-8 justify-between">
                 <aside>
                     <Link to="/" className="flex items-center font-bold mb-4">
