@@ -29,12 +29,22 @@ const Header = () => {
             user && <>
                 <li><NavLink to="dashboard" className={({ isActive }) => isActive ? "text-secondary" : "hover:text-secondary"}>Dashboard</NavLink></li>
                 <li>
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            <img
-                                alt="Tailwind CSS Navbar component"
-                                src={user?.photoURL ? user.photoURL : "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"} />
+                    <div className="dropdown">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img
+                                    src={user.photoURL || "https://i.ibb.co/2nFqQ2x/default-avatar.png"}
+                                    alt={user.email}
+                                    title={user.email}
+                                    className="rounded-full"
+                                />
+                            </div>
                         </div>
+                        <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-50 bg-base-100 right-0">
+                            <li><NavLink to="/dashboard/add-marathons">Add marathon</NavLink></li>
+                            <li><NavLink to="/dashboard/my-marathons-list">My marathon list</NavLink></li>
+                            <li><NavLink to="/dashboard/my-apply-list">My apply list</NavLink></li>
+                        </ul>
                     </div>
                 </li>
             </>
@@ -76,7 +86,7 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className="navbar-end">
-                    <ul className="menu menu-horizontal hidden lg:flex px-1">
+                    <ul className="menu menu-horizontal items-center hidden lg:flex px-1">
                         {links}
                     </ul>
                     <ThemeToggle />
