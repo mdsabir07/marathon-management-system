@@ -44,7 +44,7 @@ const MarathonRegistration = () => {
         }
     }
     return (
-        <div className='w-11/12 mx-auto py-10'>
+        <div className='w-11/12 mx-auto pt-20 sm:pt-30 pb-10 sm:pb-20'>
             <div className='text-center'>
                 <h1 className='text-3xl sm:text-5xl font-bold'>Registering for: <span className="text-primary">{marathon.title}</span></h1>
                 {/* ✅ Display total registration count */}
@@ -53,7 +53,7 @@ const MarathonRegistration = () => {
                 </p>
             </div>
 
-            <form onSubmit={handleRegisterMarathon} className="flex flex-col mx-auto space-y-12">
+            <form onSubmit={handleRegisterMarathon} className="max-w-3xl flex flex-col mx-auto space-y-12">
                 <div className="grid grid-cols-12 gap-4">
 
                     {/* Marathon Title */}
