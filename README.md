@@ -1,5 +1,8 @@
 ![Marathon System Banner](.github/marathon-banner.png)
 
+<!-- Required for pinned cards -->
+<meta property="og:image" content=".github/SOCIAL_PREVIEW.png">
+
 🏃 Marathon Management System
 Welcome to the Marathon Management System — a responsive web application built to simplify the organization and participation experience of marathon events. Whether you're an event organizer, a runner, or a volunteer, this platform empowers you to manage marathons efficiently from start to finish.
 
