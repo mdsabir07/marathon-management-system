@@ -31,7 +31,7 @@ const UpcomingMarathons = () => {
     ];
 
     return (
-        <section className="py-12 w-11/12 mx-auto">
+        <section className="py-12">
             <div className="px-4">
                 <h2 className="text-3xl sm:text-5xl clr-secondary font-bold text-center mb-10">
                     Upcoming Marathon Events

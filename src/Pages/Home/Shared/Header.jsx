@@ -2,9 +2,11 @@ import { Link, NavLink } from 'react-router';
 import UseAuth from '../../../hooks/UseAuth';
 import Swal from 'sweetalert2';
 import ThemeToggle from './ThemeToggle';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
     const { user, signOutUser } = UseAuth();
+    const [isSticky, setIsSticky] = useState(false);
     const handleSignOut = () => {
         signOutUser()
             .then(res => {
@@ -40,10 +42,20 @@ const Header = () => {
             <li><NavLink to="signin">Login</NavLink></li>
             <li><NavLink to="register">Register</NavLink></li>
         </>}
-
     </>
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsSticky(window.scrollY > 20);
+        }
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [])
     return (
-        <div className="navbar shadow-sm sm:gap-8">
+        <div className={`navbar fixed top-0 w-full z-50 transition-all duration-300 sm:gap-8 
+        ${isSticky 
+          ? 'backdrop-blur shadow-md -translate-y-1' 
+          : 'translate-y-0'
+        }`}>
             <div className="w-11/12 mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">

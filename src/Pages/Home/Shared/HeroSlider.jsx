@@ -19,10 +19,10 @@ const HeroSlider = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
-                        <img src={hero1} alt="" className="w-full rounded-md" />
+                        <img src={hero1} alt="" className="w-full max-h-[438px] object-cover rounded-md" />
                     </div>
                 </div>
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
                     <a href="#slide4" className="btn btn-circle">❮</a>
                     <a href="#slide2" className="btn btn-circle">❯</a>
                 </div>
@@ -39,10 +39,10 @@ const HeroSlider = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
-                        <img src={hero2} alt="" className="w-full rounded-md" />
+                        <img src={hero2} alt="" className="w-full max-h-[438px] object-cover rounded-md" />
                     </div>
                 </div>
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
                     <a href="#slide1" className="btn btn-circle">❮</a>
                     <a href="#slide3" className="btn btn-circle">❯</a>
                 </div>
@@ -59,10 +59,10 @@ const HeroSlider = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
-                        <img src={hero3} alt="" className="w-full rounded-md" />
+                        <img src={hero3} alt="" className="w-full max-h-[438px] object-cover rounded-md" />
                     </div>
                 </div>
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
                     <a href="#slide2" className="btn btn-circle">❮</a>
                     <a href="#slide4" className="btn btn-circle">❯</a>
                 </div>
@@ -79,10 +79,10 @@ const HeroSlider = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
-                        <img src={hero4} alt="" className="w-full rounded-md" />
+                        <img src={hero4} alt="" className="w-full max-h-[438px] object-cover rounded-md" />
                     </div>
                 </div>
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
                     <a href="#slide3" className="btn btn-circle">❮</a>
                     <a href="#slide1" className="btn btn-circle">❯</a>
                 </div>
