@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import { Link, useLoaderData, useNavigate } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import CountdownTimer from "../../Home/Shared/CountdownTimer";
 
 
@@ -29,8 +29,8 @@ const MarathonDetails = () => {
     }, [marathon]);
 
     return (
-        <div className="max-w-5xl px-6 py-16 mx-auto space-y-12">
-            <article className="space-y-8">
+        <div className="max-w-5xl px-6 py-10 sm:py-20 mx-auto space-y-12">
+            <article className="space-y-8 mt-8">
                 <div className="space-y-6">
                     <div className="flex items-center md:space-x-2">
                         <img src={marathon_img} alt={title} className="rounded-t-md" />
