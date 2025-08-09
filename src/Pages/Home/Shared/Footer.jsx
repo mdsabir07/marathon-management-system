@@ -1,11 +1,17 @@
 import { Link, NavLink } from 'react-router';
+import UseAuth from '../../../hooks/UseAuth';
 
 const Footer = () => {
+    const { user } = UseAuth();
     const links = <>
         <NavLink to="/">Home</NavLink>
         <NavLink to="marathons">Marathons</NavLink>
-        <NavLink to="signin">Login</NavLink>
-        <NavLink to="register">Register</NavLink>
+        {
+            !user && <>
+                <NavLink to="signin">Login</NavLink>
+                <NavLink to="register">Register</NavLink>
+            </>
+        }
     </>
     return (
         <footer className="py-10">

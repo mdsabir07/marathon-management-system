@@ -21,6 +21,7 @@ const Header = () => {
             })
             .catch(error => console.log(error));
     }
+
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         {
@@ -38,7 +39,7 @@ const Header = () => {
                 </li>
             </>
         }
-        {user ? <li><button onClick={handleSignOut} className='btn clr-primary-bg ml-0 lg:ml-4'>Logout</button></li> : <>
+        {user ? <li><button onClick={handleSignOut} className='btn clr-primary-bg hover:bg-[#EF509C] ml-0 lg:ml-4'>Logout</button></li> : <>
             <li><NavLink to="signin">Login</NavLink></li>
             <li><NavLink to="register">Register</NavLink></li>
         </>}
@@ -51,7 +52,7 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [])
     return (
-        <div className={`navbar fixed top-0 w-full z-50 transition-all duration-300 sm:gap-8 
+        <div className={`navbar fixed top-0 w-full z-50 transition-all shadow-sm duration-300 sm:gap-8 
         ${isSticky 
           ? 'backdrop-blur shadow-md -translate-y-1' 
           : 'translate-y-0'

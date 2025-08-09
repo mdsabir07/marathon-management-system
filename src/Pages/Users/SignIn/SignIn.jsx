@@ -39,8 +39,8 @@ const SignIn = () => {
             })
     }
     return (
-        <div className="container mx-auto flex justify-center items-center flex-col md:flex-row gap-5 px-12 my-12">
-            <div className="w-7/12 p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
+        <div className="w-11/12 mx-auto flex justify-center items-center flex-col md:flex-row gap-5 py-10 sm:py-20">
+            <div className="w-7/12 p-8 space-y-3 shadow-sm rounded-xl dark:bg-gray-50 dark:text-gray-800">
                 <h1 className="text-2xl font-bold text-center">Sign In</h1>
                 <form onSubmit={handleSignIn} className="space-y-6">
                     <div className="space-y-1 text-sm">
@@ -60,7 +60,7 @@ const SignIn = () => {
                 {/* Social login */}
                 <GoogleSignIn from={from} />
                 <p className="text-xs text-center sm:px-6 dark:text-gray-600">Don't have an account?
-                    <Link to="/register" className='clr-primary'><strong> Register</strong></Link>
+                    <Link to="/register" className='clr-primary text-base'><strong> Register</strong></Link>
                 </p>
             </div>
             <div className="w-5/12">

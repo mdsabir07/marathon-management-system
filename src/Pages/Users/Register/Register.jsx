@@ -3,7 +3,7 @@ import LottieRegister from '../../../assets/Lotties/register.json'
 import { Link } from 'react-router';
 import Lottie from 'lottie-react';
 import Swal from 'sweetalert2';
-import UseAuth from '../../../hooks/useAuth';
+import UseAuth from '../../../hooks/UseAuth';
 
 const Register = () => {
     const { createUser } = UseAuth();
@@ -42,12 +42,12 @@ const Register = () => {
             })
     }
     return (
-        <div className="container mx-auto flex justify-center items-center flex-col md:flex-row gap-5 px-12 my-12">
-            <div className="w-7/12 p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
+        <div className="w-11/12 mx-auto flex justify-center items-center flex-col md:flex-row gap-5 py-10 sm:py-20">
+            <div className="w-7/12 p-8 space-y-3 shadow-sm rounded-xl dark:bg-gray-50 dark:text-gray-800">
                 <h1 className="text-2xl font-bold text-center">Register</h1>
                 <form onSubmit={handleRegister} className="space-y-6">
                     <div className="space-y-1 text-sm">
-                        <label className="block dark:text-gray-600">Name</label>
+                        <label className="block">Name</label>
                         <input type="text" name="name" placeholder="Full name" className="w-full px-4 py-3 rounded-md border border-gray-200" />
                     </div>
                     <div>
@@ -66,7 +66,7 @@ const Register = () => {
                     {err && <p className='text-red-500'>{err}</p>}
                 </form>
                 <p className="text-xs text-center sm:px-6 dark:text-gray-600">Already have an account?
-                    <Link to="/signin" className='clr-primary'><strong> Sing in</strong></Link>
+                    <Link to="/signin" className='clr-primary text-base'><strong> Sing in</strong></Link>
                 </p>
             </div>
             <div className="w-5/12">
