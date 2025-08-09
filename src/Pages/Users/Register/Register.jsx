@@ -62,11 +62,11 @@ const Register = () => {
                         <label className="block dark:text-gray-600">Password</label>
                         <input type="password" name="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border border-gray-200" />
                     </div>
-                    <button type='submit' className="cursor-pointer block w-full p-3 text-center rounded-sm dark:text-gray-50 clr-primary-bg">Register</button>
+                    <button type='submit' className="cursor-pointer block w-full p-3 text-center rounded-sm dark:text-gray-50 bg-primary">Register</button>
                     {err && <p className='text-red-500'>{err}</p>}
                 </form>
                 <p className="text-xs text-center sm:px-6 dark:text-gray-600">Already have an account?
-                    <Link to="/signin" className='clr-primary text-base'><strong> Sing in</strong></Link>
+                    <Link to="/signin" className='text-primary text-base'><strong> Sing in</strong></Link>
                 </p>
             </div>
             <div className="w-5/12">

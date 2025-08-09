@@ -3,28 +3,28 @@ const ApplyRow = ({ index, application, onUpdate, onDelete }) => {
     return (
         <tr className="border-b border-opacity-20 border-gray-700">
             <td className="p-2">
-                <p className="clr-secondary font-bold">{index + 1}</p>
+                <p className="text-secondary font-bold">{index + 1}</p>
             </td>
-            <td className="p-2 clr-primary">
+            <td className="p-2 text-primary">
                 <p>{marathonTitle}</p>
             </td>
             <td className="p-2">
                 <p>{firstName}<span> {lastName}</span></p>
             </td>
-            <td className="p-2 clr-secondary">
+            <td className="p-2 text-secondary">
                 <p>{marathonDate}</p>
             </td>
             <td className="p-2 max-w-3xs">
                 <p>{additionalInfo}</p>
             </td>
-            <td className="p-2 clr-secondary">
+            <td className="p-2 text-secondary">
                 <p>{contact}</p>
                 <p>{email}</p>
             </td>
             <td className="p-2 grid gap-3 justify-end items-center">
                 <button 
                 onClick={() => onUpdate(application)}
-                className="btn rounded-md clr-primary-bg cursor-pointer">
+                className="btn rounded-md bg-primary cursor-pointer">
                     Update
                 </button>
                 <button 

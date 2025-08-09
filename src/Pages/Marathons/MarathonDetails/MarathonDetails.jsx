@@ -37,12 +37,12 @@ const MarathonDetails = () => {
                     </div>
                     <h1 className="text-4xl font-bold md:tracking-tight md:text-5xl">{title}</h1>
                     <div className="flex flex-col justify-between w-full md:flex-row text-lg">
-                        <p className="">Marathon start date:<strong className="clr-secondary"> {marathonDate}</strong></p>
-                        <p className="">Registration deadline:<strong className="clr-secondary"> {startRegDate} - {endRegDate}</strong></p>
+                        <p className="">Marathon start date:<strong className="text-secondary"> {marathonDate}</strong></p>
+                        <p className="">Registration deadline:<strong className="text-secondary"> {startRegDate} - {endRegDate}</strong></p>
                     </div>
                     <div className="flex flex-col justify-between w-full md:flex-row text-lg">
-                        <p className="">Running distance:<strong className="clr-primary"> {runDistance}</strong></p>
-                        <p className="">Location:<strong className="clr-primary"> {location}</strong></p>
+                        <p className="">Running distance:<strong className="text-primary"> {runDistance}</strong></p>
+                        <p className="">Location:<strong className="text-primary"> {location}</strong></p>
                     </div>
                 </div>
                 <div className="">
@@ -52,13 +52,13 @@ const MarathonDetails = () => {
                 {isRegistrationOpen ? (
                     <Link
                         to={`/marathon-registration/${_id}`}
-                        className="relative px-8 py-4 flex justify-center items-center overflow-hidden font-semibold rounded clr-primary-bg"
+                        className="relative px-8 py-4 flex justify-center items-center overflow-hidden font-semibold rounded bg-primary"
                     >
                         Apply now
                     </Link>
                 ) : (
                     <button
-                        className="relative px-8 py-4 flex justify-center items-center overflow-hidden font-semibold rounded clr-primary-bg opacity-50 cursor-not-allowed"
+                        className="relative px-8 py-4 flex justify-center items-center overflow-hidden font-semibold rounded bg-primary opacity-50 cursor-not-allowed"
                         disabled
                     >
                         Registration Closed
@@ -67,7 +67,7 @@ const MarathonDetails = () => {
 
             </article>
             <section className="my-10">
-                <h2 className="text-3xl sm:text-5xl font-bold mb-5 sm:mb-8 clr-secondary text-center">Marathon Countdown</h2>
+                <h2 className="text-3xl sm:text-5xl font-bold mb-5 sm:mb-8 text-secondary text-center">Marathon Countdown</h2>
                 <CountdownTimer marathonDate={marathonDate} />
             </section>
         </div>

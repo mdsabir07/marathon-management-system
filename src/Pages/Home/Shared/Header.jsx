@@ -39,7 +39,7 @@ const Header = () => {
                 </li>
             </>
         }
-        {user ? <li><button onClick={handleSignOut} className='btn clr-primary-bg hover:bg-[#EF509C] ml-0 lg:ml-4'>Logout</button></li> : <>
+        {user ? <li><button onClick={handleSignOut} className='btn btn-primary hover:bg-secondary ml-0 lg:ml-4'>Logout</button></li> : <>
             <li><NavLink to="signin">Login</NavLink></li>
             <li><NavLink to="register">Register</NavLink></li>
         </>}
@@ -70,9 +70,9 @@ const Header = () => {
                         </ul>
                     </div>
                     <Link to="/" className="flex items-center font-bold">
-                        <span className='clr-secondary text-3xl'>M</span>
-                        <span className='clr-primary'>MARATHON</span>
-                        <span className='clr-secondary text-3xl'>S</span>
+                        <span className='text-secondary text-3xl'>M</span>
+                        <span className='text-primary'>MARATHON</span>
+                        <span className='text-secondary text-3xl'>S</span>
                     </Link>
                 </div>
                 <div className="navbar-end">

@@ -1,22 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
-.clr-primary {
-    color: #0091BD;
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+  --color-primary: #0091BD;
+  --color-secondary: #EF509C;
 }
-.clr-primary-bg {
-    background: #0091BD;
+
+.font-inter {
+  font-family: "Inter", sans-serif;
 }
+
+/* .text-primary {
+  color: #0091BD;
+}
+
+.bg-primary {
+  background: #0091BD;
+}
+
 .clr-secondary {
-    color: #EF509C;
+  color: #EF509C;
 }
+
 .clr-secondary-bg {
-    background: #EF509C;
-}
+  background: #EF509C;
+} */
 
 /* Dark mode styles */
 html.dark body {
-  background-color: #070709; 
+  background-color: #070709;
   color: white;
 }
 

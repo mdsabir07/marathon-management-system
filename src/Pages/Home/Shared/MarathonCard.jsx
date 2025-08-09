@@ -9,13 +9,13 @@ const MarathonCard = ({ marathon }) => {
             <div className="flex flex-col justify-between p-6 space-y-8">
                 <div className="space-y-2">
                     <h2 className="text-3xl font-semibold tracking-wide">{title}</h2>
-                    <p className="">Location:<strong className='clr-secondary'> {location}</strong></p>
+                    <p className="">Location:<strong className='text-secondary'> {location}</strong></p>
                     <p className="">
                         Registration Dates:
-                        <strong className='clr-primary'> {startRegDate}</strong> - <strong className='clr-primary'>{endRegDate}</strong>
+                        <strong className='text-primary'> {startRegDate}</strong> - <strong className='text-primary'>{endRegDate}</strong>
                     </p>
                 </div>
-                <Link to={`/marathon/${_id}`}><button className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md clr-primary-bg cursor-pointer">See Details</button></Link>
+                <Link to={`/marathon/${_id}`}><button className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-primary hover:bg-secondary cursor-pointer">See Details</button></Link>
             </div>
         </div>
     );

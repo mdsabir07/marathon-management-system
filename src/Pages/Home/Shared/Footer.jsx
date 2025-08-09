@@ -18,9 +18,9 @@ const Footer = () => {
             <div className="w-11/12 mx-auto flex flex-col md:flex-row gap-5 md:gap-8 justify-between">
                 <aside>
                     <Link to="/" className="flex items-center font-bold mb-4">
-                        <span className='clr-secondary text-3xl'>M</span>
-                        <span className='clr-primary'>MARATHON</span>
-                        <span className='clr-secondary text-3xl'>S</span>
+                        <span className='text-secondary text-3xl'>M</span>
+                        <span className='text-primary'>MARATHON</span>
+                        <span className='text-secondary text-3xl'>S</span>
                     </Link>
                     <p>
                         Marathon Management System

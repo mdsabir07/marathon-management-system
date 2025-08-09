@@ -48,9 +48,9 @@ const MarathonRegistration = () => {
     return (
         <div className='w-11/12 mx-auto py-10'>
             <div className='text-center'>
-                <h1 className='text-3xl sm:text-5xl font-bold'>Registering for: <span className="clr-primary">{marathon.title}</span></h1>
+                <h1 className='text-3xl sm:text-5xl font-bold'>Registering for: <span className="text-primary">{marathon.title}</span></h1>
                 {/* ✅ Display total registration count */}
-                <p className="text-lg clr-secondary py-5">
+                <p className="text-lg text-secondary py-5">
                     Total Registrations: <span className="font-semibold">{marathon.totalRegistrationCount || 0}</span>
                 </p>
             </div>
@@ -138,7 +138,7 @@ const MarathonRegistration = () => {
                     <div className="col-span-full">
                         <button
                             type="submit"
-                            className="cursor-pointer px-8 text-xl py-3 w-full font-semibold rounded clr-primary-bg"
+                            className="cursor-pointer px-8 text-xl py-3 w-full font-semibold rounded bg-primary hover:bg-secondary"
                         >
                             Submit Registration
                         </button>

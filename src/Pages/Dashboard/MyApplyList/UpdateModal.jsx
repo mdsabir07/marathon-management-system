@@ -17,7 +17,7 @@ const UpdateModal = ({ application, onClose, onSave }) => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="border border-gray-600 rounded-lg shadow-lg p-6 w-full max-w-lg relative">
                 <button
-                    className="absolute cursor-pointer top-2 right-3 clr-secondary"
+                    className="absolute cursor-pointer top-2 right-3 text-secondary"
                     onClick={onClose}
                 >
                     ✖

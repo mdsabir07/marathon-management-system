@@ -87,7 +87,7 @@ const MyApplyList = () => {
     if (loading) return <Loading />;
     return (
         <>
-            <h2 className="mb-4 text-2xl clr-secondary leading-tight">
+            <h2 className="mb-4 text-2xl text-secondary leading-tight">
                 Total applied: <strong>{applications.length}</strong>
             </h2>
             <div className="mb-4 flex gap-2 items-center">
@@ -102,13 +102,13 @@ const MyApplyList = () => {
                     }}
                 />
                 <button
-                    className="btn clr-primary-bg"
+                    className="btn bg-primary"
                     onClick={fetchApplications}
                 >
                     Search
                 </button>
                 <button
-                    className="btn clr-secondary-bg"
+                    className="btn bg-secondary"
                     onClick={() => {
                         setSearchTitle("");
                         fetchApplications();

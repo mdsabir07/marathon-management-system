@@ -12,7 +12,7 @@ const Home = () => {
         <>
             <div className="w-11/12 mx-auto">
                 <HeroSlider />
-                <h2 className="text-3xl sm:text-5xl font-bold mb-5 sm:mb-8 clr-secondary text-center">Trending marathons</h2>
+                <h2 className="text-3xl sm:text-5xl font-bold mb-5 sm:mb-8 text-secondary text-center">Trending marathons</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {
                         marathons.map(marathon => (
@@ -23,7 +23,7 @@ const Home = () => {
                 <UpcomingMarathons />
 
                 <div className="my-10">
-                    <h2 className="text-3xl sm:text-5xl font-bold mb-5 sm:mb-8 clr-secondary text-center">Marathon Countdown</h2>
+                    <h2 className="text-3xl sm:text-5xl font-bold mb-5 sm:mb-8 text-secondary text-center">Marathon Countdown</h2>
                     <CountdownTimer marathonDate={marathonDate} />
                 </div>
                 <NewsLetter />

@@ -85,7 +85,7 @@ const MyMarathonsList = () => {
 
     return (
         <>
-            <h2 className="mb-4 text-2xl clr-secondary leading-tight">
+            <h2 className="mb-4 text-2xl text-secondary leading-tight">
                 Total marathons: <strong>{marathons.length}</strong>
             </h2>
 
@@ -121,7 +121,7 @@ const MyMarathonsList = () => {
                                 <td className="p-3 text-right space-x-2">
                                     <button
                                         onClick={() => handleUpdate(marathon)}
-                                        className="cursor-pointer px-3 py-1 clr-primary-bg rounded hover:bg-blue-700"
+                                        className="cursor-pointer px-3 py-1 bg-primary rounded hover:bg-blue-700"
                                     >
                                         Update
                                     </button>

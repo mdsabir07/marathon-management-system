@@ -33,7 +33,7 @@ const UpcomingMarathons = () => {
     return (
         <section className="py-12">
             <div className="px-4">
-                <h2 className="text-3xl sm:text-5xl clr-secondary font-bold text-center mb-10">
+                <h2 className="text-3xl sm:text-5xl text-secondary font-bold text-center mb-10">
                     Upcoming Marathon Events
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -41,10 +41,10 @@ const UpcomingMarathons = () => {
                         <div key={id} className="border border-gray-600 rounded-lg shadow-md overflow-hidden">
                             <img src={image} alt={title} className="w-full h-48 object-cover" />
                             <div className="p-4">
-                                <h3 className="text-lg font-semibold text-clr-primary">{title}</h3>
+                                <h3 className="text-lg font-semibold text-text-primary">{title}</h3>
                                 <p className="text-sm mt-1">📍 {location}</p>
                                 <p className="text-sm mt-2">
-                                    🗓️ Registration: <span className="text-clr-secondary font-medium">{registrationDate}</span>
+                                    🗓️ Registration: <span className="text-text-secondary font-medium">{registrationDate}</span>
                                 </p>
                             </div>
                         </div>

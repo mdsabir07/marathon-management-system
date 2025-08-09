@@ -6,8 +6,8 @@ import { CountdownCircleTimer } from "react-countdown-circle-timer";
 // Helper to format time units
 const renderTime = (dimension, time) => (
     <div className="flex flex-col items-center text-sm sm:text-base font-bold">
-        <div className="text-xl clr-primary sm:text-2xl">{time}</div>
-        <div className="clr-secondary">{dimension}</div>
+        <div className="text-xl text-primary sm:text-2xl">{time}</div>
+        <div className="text-secondary">{dimension}</div>
     </div>
 );
 

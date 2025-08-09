@@ -41,7 +41,7 @@ const AddMarathons = () => {
     return (
         <div className=''>
             <div className='text-center'>
-                <h1 className='text-3xl sm:text-5xl font-bold clr-secondary'>Add New Marathon</h1>
+                <h1 className='text-3xl sm:text-5xl font-bold text-secondary'>Add New Marathon</h1>
                 <p className='text-lg my-5'>It is a well-known fact that organizers can be distracted by the visible layout of a system when managing a marathon. The benefit of using the Marathon Management System is that it provides a more structured and intuitive interface, as opposed to using generic tools or placeholder content.</p>
             </div>
 
@@ -110,7 +110,7 @@ const AddMarathons = () => {
                         <input name='marathon_img' type="url" className="w-full border border-gray-700 focus:outline-0 p-3 rounded" />
                     </div>
 
-                    <button type="submit" className="cursor-pointer px-8 col-span-full text-xl py-3 w-full font-semibold rounded clr-primary-bg">Add Marathon</button>
+                    <button type="submit" className="cursor-pointer px-8 col-span-full text-xl py-3 w-full font-semibold rounded bg-primary">Add Marathon</button>
                 </div>
             </form>
 
