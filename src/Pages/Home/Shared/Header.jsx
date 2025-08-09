@@ -40,7 +40,7 @@ const Header = () => {
                                 />
                             </div>
                         </div>
-                        <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-50 bg-base-100 right-0">
+                        <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-md bg-gray-200 text-black rounded-box w-50 right-0">
                             <li><NavLink to="/dashboard/add-marathons">Add marathon</NavLink></li>
                             <li><NavLink to="/dashboard/my-marathons-list">My marathon list</NavLink></li>
                             <li><NavLink to="/dashboard/my-apply-list">My apply list</NavLink></li>
