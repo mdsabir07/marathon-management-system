@@ -6,7 +6,6 @@ import Swal from "sweetalert2";
 const MarathonRegistration = () => {
     const marathon = useLoaderData();
     const { user } = UseAuth();
-    // const navigate = useNavigate();
 
     const handleRegisterMarathon = async (e) => {
         e.preventDefault();
@@ -33,7 +32,6 @@ const MarathonRegistration = () => {
                     showConfirmButton: false,
                     timer: 1500,
                 });
-                // navigate('my-apply-list');
             }
         } catch (error) {
             console.error('Error submitting application:', error);

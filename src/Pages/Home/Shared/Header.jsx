@@ -24,9 +24,9 @@ const Header = () => {
 
     const links = <>
         <li><NavLink to="/" className="hover:text-secondary">Home</NavLink></li>
+        <li><NavLink to="marathons" className="hover:text-secondary">Marathons</NavLink></li>
         {
             user && <>
-                <li><NavLink to="marathons" className="hover:text-secondary">Marathons</NavLink></li>
                 <li><NavLink to="dashboard" className="hover:text-secondary">Dashboard</NavLink></li>
                 <li>
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
@@ -53,10 +53,10 @@ const Header = () => {
     }, [])
     return (
         <div className={`navbar fixed top-0 w-full z-50 transition-all shadow-sm duration-300 sm:gap-8 
-        ${isSticky 
-          ? 'backdrop-blur shadow-md -translate-y-1' 
-          : 'translate-y-0'
-        }`}>
+        ${isSticky
+                ? 'backdrop-blur shadow-md -translate-y-1'
+                : 'translate-y-0'
+            }`}>
             <div className="w-11/12 mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">

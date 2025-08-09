@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'marathons',
-                element: <PrivateRoute><Marathons /></PrivateRoute>,
+                Component: Marathons,
                 hydrateFallbackElement: <Loading />,
                 loader: async () => {
                     const res = await axios.get(`${import.meta.env.VITE_API_URL}/marathons`);
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'marathon/:id',
-                element: <PrivateRoute><MarathonDetails /></PrivateRoute>,
+                Component: MarathonDetails,
                 hydrateFallbackElement: <Loading />,
                 loader: async ({ params }) => {
                     const res = await axios.get(`${import.meta.env.VITE_API_URL}/marathon/${params.id}`);
@@ -74,7 +74,6 @@ const router = createBrowserRouter([
                     }
                 ]
             },
-
             {
                 path: 'marathon-registration/:id',
                 element: <PrivateRoute><MarathonRegistration /></PrivateRoute>,
