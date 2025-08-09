@@ -127,7 +127,7 @@ const MyMarathonsList = () => {
                                     </button>
                                     <button
                                         onClick={() => handleDelete(marathon)}
-                                        className="cursor-pointer px-3 py-1 bg-red-600 rounded hover:bg-red-700"
+                                        className="cursor-pointer px-3 py-1 btn bg-red-600 rounded hover:bg-red-700"
                                     >
                                         Delete
                                     </button>

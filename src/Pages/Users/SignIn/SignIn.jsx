@@ -54,7 +54,7 @@ const SignIn = () => {
                             <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                         </div>
                     </div>
-                    <button type='submit' className="cursor-pointer block w-full p-3 text-center rounded-sm dark:text-gray-50 bg-primary">Sign In</button>
+                    <button type='submit' className="cursor-pointer block w-full p-3 pb-6 text-center rounded-sm btn btn-primary hover:btn-secondary">Sign In</button>
                     {err && <p className='text-red-500'>{err}</p>}
                 </form>
                 {/* Social login */}

@@ -4,12 +4,12 @@ import UseAuth from '../../../hooks/UseAuth';
 const Footer = () => {
     const { user } = UseAuth();
     const links = <>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="marathons">Marathons</NavLink>
+        <NavLink to="/" className="hover:text-secondary">Home</NavLink>
+        <NavLink to="marathons" className="hover:text-secondary">Marathons</NavLink>
         {
             !user && <>
-                <NavLink to="signin">Login</NavLink>
-                <NavLink to="register">Register</NavLink>
+                <NavLink to="signin" className="hover:text-secondary">Login</NavLink>
+                <NavLink to="register" className="hover:text-secondary">Register</NavLink>
             </>
         }
     </>
