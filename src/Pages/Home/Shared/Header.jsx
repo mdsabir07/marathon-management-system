@@ -23,11 +23,11 @@ const Header = () => {
     }
 
     const links = <>
-        <li><NavLink to="/" className="hover:text-secondary">Home</NavLink></li>
-        <li><NavLink to="marathons" className="hover:text-secondary">Marathons</NavLink></li>
+        <li><NavLink to="/" className={({ isActive }) => isActive ? "text-secondary" : "hover:text-secondary"}>Home</NavLink></li>
+        <li><NavLink to="marathons" className={({ isActive }) => isActive ? "text-secondary" : "hover:text-secondary"}>Marathons</NavLink></li>
         {
             user && <>
-                <li><NavLink to="dashboard" className="hover:text-secondary">Dashboard</NavLink></li>
+                <li><NavLink to="dashboard" className={({ isActive }) => isActive ? "text-secondary" : "hover:text-secondary"}>Dashboard</NavLink></li>
                 <li>
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
@@ -40,8 +40,8 @@ const Header = () => {
             </>
         }
         {user ? <li><button onClick={handleSignOut} className='btn btn-primary hover:btn-secondary ml-0 lg:ml-4'>Logout</button></li> : <>
-            <li><NavLink to="signin" className="hover:text-secondary">Login</NavLink></li>
-            <li><NavLink to="register" className="hover:text-secondary">Register</NavLink></li>
+            <li><NavLink to="signin" className={({ isActive }) => isActive ? "text-secondary" : "hover:text-secondary"}>Login</NavLink></li>
+            <li><NavLink to="register" className={({ isActive }) => isActive ? "text-secondary" : "hover:text-secondary"}>Register</NavLink></li>
         </>}
     </>
     useEffect(() => {

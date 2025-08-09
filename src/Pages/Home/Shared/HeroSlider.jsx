@@ -16,7 +16,7 @@ const HeroSlider = () => {
                         <p className="mt-6 mb-8 text-base sm:text-lg sm:mb-12">Efficiently handle participant registrations with real-time updates. The system allows participants to register, modify details, and track their progress throughout the marathon.
                         </p>
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                            <Link to="/register" className="px-8 py-3 text-lg font-semibold rounded bg-primary hover:bg-secondary">Register now</Link>
+                            <Link to="/register" className="px-8 py-3 text-lg font-semibold rounded btn btn-primary hover:btn-secondary">Register now</Link>
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
@@ -36,7 +36,7 @@ const HeroSlider = () => {
                         <p className="mt-6 mb-8 text-base sm:text-lg sm:mb-12">Manage race-day activities seamlessly, including route mapping, timing systems, and live tracking of runners. Keep spectators and organizers informed with real-time updates on runners' locations and progress.
                         </p>
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                            <Link to="/register" className="px-8 py-3 text-lg font-semibold rounded bg-primary hover:bg-secondary">Register now</Link>
+                            <Link to="/register" className="px-8 py-3 text-lg font-semibold rounded btn btn-primary hover:btn-secondary">Register now</Link>
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
@@ -56,7 +56,7 @@ const HeroSlider = () => {
                         <p className="mt-6 mb-8 text-base sm:text-lg sm:mb-12">Coordinate volunteer assignments, staff roles, and shift schedules for a smooth event operation. The system ensures optimal support for participants and spectators throughout the race.
                         </p>
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                            <Link to="/register" className="px-8 py-3 text-lg font-semibold rounded bg-primary hover:bg-secondary">Register now</Link>
+                            <Link to="/register" className="px-8 py-3 text-lg font-semibold rounded btn btn-primary hover:btn-secondary">Register now</Link>
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
@@ -76,7 +76,7 @@ const HeroSlider = () => {
                         <p className="mt-6 mb-8 text-base sm:text-lg sm:mb-12">Post-race, the system compiles detailed results, times, and rankings for each participant. Access analytics for performance reviews, participant demographics, and overall event success.
                         </p>
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                            <Link to="/register" className="px-8 py-3 text-lg font-semibold rounded bg-primary hover:bg-secondary">Register now</Link>
+                            <Link to="/register" className="px-8 py-3 text-lg font-semibold rounded btn btn-primary hover:btn-secondary">Register now</Link>
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
