@@ -52,13 +52,13 @@ const MarathonDetails = () => {
                 {isRegistrationOpen ? (
                     <Link
                         to={`/marathon-registration/${_id}`}
-                        className="relative px-8 py-4 flex justify-center items-center overflow-hidden font-semibold rounded bg-primary"
+                        className="relative px-8 py-4 flex justify-center items-center overflow-hidden font-semibold rounded btn btn-primary hover:btn-secondary"
                     >
                         Apply now
                     </Link>
                 ) : (
                     <button
-                        className="relative px-8 py-4 flex justify-center items-center overflow-hidden font-semibold rounded bg-primary opacity-50 cursor-not-allowed"
+                        className="relative px-8 py-4 flex justify-center items-center overflow-hidden font-semibold rounded btn btn-primary hover:btn-secondary opacity-50 cursor-not-allowed"
                         disabled
                     >
                         Registration Closed

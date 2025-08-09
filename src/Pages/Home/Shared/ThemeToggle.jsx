@@ -27,7 +27,7 @@ const ThemeToggle = () => {
     return (
         <button
             onClick={() => setIsDark(prev => !prev)} // Toggle dark mode on button click
-            className="ml-4 px-3 py-1 border rounded cursor-pointer text-sm dark:bg-gray-800 dark:text-white bg-gray-200 text-black"
+            className="ml-4 px-3 py-1 border rounded cursor-pointer text-sm btn btn-primary hover:btn-secondary"
         >
             {isDark ? '☀️ Light' : '🌙 Dark'}
         </button>

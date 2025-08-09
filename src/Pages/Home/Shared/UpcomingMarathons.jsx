@@ -41,10 +41,10 @@ const UpcomingMarathons = () => {
                         <div key={id} className="border border-gray-600 rounded-lg shadow-md overflow-hidden">
                             <img src={image} alt={title} className="w-full h-48 object-cover" />
                             <div className="p-4">
-                                <h3 className="text-lg font-semibold text-text-primary">{title}</h3>
+                                <h3 className="text-lg font-semibold text-primary">{title}</h3>
                                 <p className="text-sm mt-1">📍 {location}</p>
                                 <p className="text-sm mt-2">
-                                    🗓️ Registration: <span className="text-text-secondary font-medium">{registrationDate}</span>
+                                    🗓️ Registration: <span className="text-secondary font-medium">{registrationDate}</span>
                                 </p>
                             </div>
                         </div>

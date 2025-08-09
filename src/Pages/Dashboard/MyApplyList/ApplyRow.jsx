@@ -24,7 +24,7 @@ const ApplyRow = ({ index, application, onUpdate, onDelete }) => {
             <td className="p-2 grid gap-3 justify-end items-center">
                 <button 
                 onClick={() => onUpdate(application)}
-                className="btn rounded-md bg-primary cursor-pointer">
+                className="btn rounded-md btn-primary hover:btn-secondary cursor-pointer">
                     Update
                 </button>
                 <button 

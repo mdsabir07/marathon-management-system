@@ -66,7 +66,7 @@ const Register = () => {
                     {err && <p className='text-red-500'>{err}</p>}
                 </form>
                 <p className="text-xs text-center sm:px-6 dark:text-gray-600">Already have an account?
-                    <Link to="/signin" className='text-primary text-base'><strong> Sing in</strong></Link>
+                    <Link to="/signin" className='text-primary hover:text-secondary text-base'><strong> Sing in</strong></Link>
                 </p>
             </div>
             <div className="w-5/12">

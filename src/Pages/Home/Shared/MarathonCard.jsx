@@ -15,7 +15,7 @@ const MarathonCard = ({ marathon }) => {
                         <strong className='text-primary'> {startRegDate}</strong> - <strong className='text-primary'>{endRegDate}</strong>
                     </p>
                 </div>
-                <Link to={`/marathon/${_id}`}><button className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-primary hover:bg-secondary cursor-pointer">See Details</button></Link>
+                <Link to={`/marathon/${_id}`}><button className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md btn btn-primary hover:btn-secondary cursor-pointer">See Details</button></Link>
             </div>
         </div>
     );

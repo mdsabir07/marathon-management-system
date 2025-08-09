@@ -60,7 +60,7 @@ const SignIn = () => {
                 {/* Social login */}
                 <GoogleSignIn from={from} />
                 <p className="text-xs text-center sm:px-6 dark:text-gray-600">Don't have an account?
-                    <Link to="/register" className='text-primary text-base'><strong> Register</strong></Link>
+                    <Link to="/register" className='text-primary hover:text-secondary text-base'><strong> Register</strong></Link>
                 </p>
             </div>
             <div className="w-5/12">

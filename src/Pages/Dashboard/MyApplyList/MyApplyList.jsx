@@ -102,13 +102,13 @@ const MyApplyList = () => {
                     }}
                 />
                 <button
-                    className="btn bg-primary"
+                    className="btn btn-primary"
                     onClick={fetchApplications}
                 >
                     Search
                 </button>
                 <button
-                    className="btn bg-secondary"
+                    className="btn btn-secondary"
                     onClick={() => {
                         setSearchTitle("");
                         fetchApplications();

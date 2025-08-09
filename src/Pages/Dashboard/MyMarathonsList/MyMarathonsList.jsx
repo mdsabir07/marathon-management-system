@@ -121,7 +121,7 @@ const MyMarathonsList = () => {
                                 <td className="p-3 text-right space-x-2">
                                     <button
                                         onClick={() => handleUpdate(marathon)}
-                                        className="cursor-pointer px-3 py-1 bg-primary rounded hover:bg-blue-700"
+                                        className="cursor-pointer px-3 py-1 btn btn-primary rounded hover:btn-secondary"
                                     >
                                         Update
                                     </button>

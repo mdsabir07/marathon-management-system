@@ -13,22 +13,6 @@
   font-family: "Inter", sans-serif;
 }
 
-/* .text-primary {
-  color: #0091BD;
-}
-
-.bg-primary {
-  background: #0091BD;
-}
-
-.clr-secondary {
-  color: #EF509C;
-}
-
-.clr-secondary-bg {
-  background: #EF509C;
-} */
-
 /* Dark mode styles */
 html.dark body {
   background-color: #070709;

@@ -110,7 +110,7 @@ const AddMarathons = () => {
                         <input name='marathon_img' type="url" className="w-full border border-gray-700 focus:outline-0 p-3 rounded" />
                     </div>
 
-                    <button type="submit" className="cursor-pointer px-8 col-span-full text-xl py-3 w-full font-semibold rounded bg-primary">Add Marathon</button>
+                    <button type="submit" className="cursor-pointer px-8 col-span-full text-xl py-3 w-full font-semibold rounded btn btn-primary hover:btn-secondary">Add Marathon</button>
                 </div>
             </form>
 

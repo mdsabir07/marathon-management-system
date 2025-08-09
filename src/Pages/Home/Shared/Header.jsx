@@ -39,7 +39,7 @@ const Header = () => {
                 </li>
             </>
         }
-        {user ? <li><button onClick={handleSignOut} className='btn btn-primary hover:bg-secondary ml-0 lg:ml-4'>Logout</button></li> : <>
+        {user ? <li><button onClick={handleSignOut} className='btn btn-primary hover:btn-secondary ml-0 lg:ml-4'>Logout</button></li> : <>
             <li><NavLink to="signin">Login</NavLink></li>
             <li><NavLink to="register">Register</NavLink></li>
         </>}

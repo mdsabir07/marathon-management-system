@@ -97,8 +97,8 @@ const UpdateMarathonModal = ({ marathon, onClose, onSave }) => {
                     </div>
 
                     <div className="col-span-full flex justify-end space-x-4 mt-4">
-                        <button type="button" onClick={onClose} className="cursor-pointer px-4 py-2 btn-secondary rounded">Cancel</button>
-                        <button type="submit" className="cursor-pointer px-4 py-2 bg-primary rounded">Save Changes</button>
+                        <button type="button" onClick={onClose} className="cursor-pointer px-4 py-2 btn btn-secondary rounded">Cancel</button>
+                        <button type="submit" className="cursor-pointer px-4 py-2 btn btn-primary rounded">Save Changes</button>
                     </div>
                 </form>
             </div>

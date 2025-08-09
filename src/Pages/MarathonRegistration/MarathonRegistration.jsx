@@ -138,7 +138,7 @@ const MarathonRegistration = () => {
                     <div className="col-span-full">
                         <button
                             type="submit"
-                            className="cursor-pointer px-8 text-xl py-3 w-full font-semibold rounded bg-primary hover:bg-secondary"
+                            className="cursor-pointer px-8 text-xl py-3 w-full font-semibold rounded btn btn-primary hover:btn-secondary"
                         >
                             Submit Registration
                         </button>

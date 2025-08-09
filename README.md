@@ -5,6 +5,7 @@
 <meta name="twitter:image" content="https://raw.githubusercontent.com/mdsabir07/marathon-management-system/main/.github/SOCIAL_PREVIEW.png">
 
 🏃 Marathon Management System
+
 Welcome to the Marathon Management System — a responsive web application built to simplify the organization and participation experience of marathon events. Whether you're an event organizer, a runner, or a volunteer, this platform empowers you to manage marathons efficiently from start to finish.
 
 🔗 Live Website: https://assign11-marathon.web.app/

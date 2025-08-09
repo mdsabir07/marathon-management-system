@@ -7,7 +7,7 @@ import NewsLetter from './Shared/NewsLetter';
 
 const Home = () => {
     const marathons = useLoaderData();
-    const marathonDate = "2025-08-15T09:00:00";
+    const marathonDate = "2025-10-15T09:00:00";
     return (
         <>
             <div className="w-11/12 mx-auto">
