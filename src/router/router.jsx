@@ -24,17 +24,11 @@ const router = createBrowserRouter([
             {
                 index: true,
                 Component: Home,
-                hydrateFallbackElement: <Loading />,
                 handle: { title: 'Home - Marathon Management System' }
             },
             {
                 path: 'marathons',
                 Component: Marathons,
-                hydrateFallbackElement: <Loading />,
-                loader: async () => {
-                    const res = await axios.get(`${import.meta.env.VITE_API_URL}/marathons`);
-                    return res.data;
-                },
                 handle: { title: 'Marathons - Marathon Management System' }
             },
             {
