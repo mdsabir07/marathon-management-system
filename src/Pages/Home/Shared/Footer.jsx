@@ -29,7 +29,7 @@ const Footer = () => {
                     </p>
                 </aside>
                 <nav>
-                    <h6 className="footer-title">Quick links</h6>
+                    <h6 className="uppercase font-semibold">Quick links</h6>
                     <div className="flex flex-col gap-3 mt-5">
                         {links}
                     </div>

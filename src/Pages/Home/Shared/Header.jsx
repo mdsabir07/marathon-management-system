@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 const Header = () => {
     const { user, signOutUser } = UseAuth();
+    console.log(user);
     const [isSticky, setIsSticky] = useState(false);
     const handleSignOut = () => {
         signOutUser()
@@ -33,9 +34,9 @@ const Header = () => {
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 <img
-                                    src={user.photoURL || "https://i.ibb.co/2nFqQ2x/default-avatar.png"}
-                                    alt={user.email}
-                                    title={user.email}
+                                    src={user?.photoURL || "https://i.ibb.co/2nFqQ2x/default-avatar.png"}
+                                    alt={user?.displayName}
+                                    title={user?.displayName}
                                     className="rounded-full"
                                 />
                             </div>

@@ -6,14 +6,14 @@ import Swal from 'sweetalert2';
 import UseAuth from '../../../hooks/UseAuth';
 
 const Register = () => {
-    const { createUser } = UseAuth();
+    const { createUser, updateUserProfile } = UseAuth();
     const [err, setErr] = useState('');
 
     const handleRegister = e => {
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
-        const { email, password, ...restFormData } = Object.fromEntries(formData.entries());
+        const { email, password, name, photo } = Object.fromEntries(formData.entries());
 
         setErr('');
 
@@ -27,13 +27,27 @@ const Register = () => {
         createUser(email, password)
             .then(res => {
                 const user = res.user;
-                Swal.fire({
-                    position: "center",
-                    icon: "success",
-                    title: `${user?.email} Registration successful!`,
-                    showConfirmButton: false,
-                    timer: 1500
-                });
+
+                const userProfileUpdate = {
+                    displayName: name,
+                    photoURL: photo
+                }
+
+                updateUserProfile(userProfileUpdate)
+                    .then(() => {
+                        console.log('Profile name and pic updated');
+                        Swal.fire({
+                            position: "center",
+                            icon: "success",
+                            title: `${user?.email} Registration successful!`,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    })
+                    .catch(error => {
+                        console.error("Error updating profile:", error);
+                        setErr("Profile update failed.");
+                    });
             })
             .catch(error => {
                 const errorCode = error.code;
