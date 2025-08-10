@@ -7,9 +7,9 @@ import hero4 from '../../../assets/hero4.jpg';
 const HeroSlider = () => {
 
     return (
-        <div className="carousel w-full pt-15 pb-8 sm:pb-0">
+        <div className="carousel w-full h-[630px]">
             <div id="slide1" className="carousel-item relative w-full">
-                <div className="container flex flex-col justify-center gap-8 p-2 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+                <div className="container flex flex-col justify-center gap-8 p-2 mx-auto lg:flex-row lg:justify-between">
                     <div className="flex flex-col justify-center text-center rounded-sm lg:text-left flex-1">
                         <h1 className="text-3xl font-bold leading-none text-secondary sm:text-6xl">Event Registration and Participant Management
                         </h1>
@@ -29,7 +29,7 @@ const HeroSlider = () => {
                 </div>
             </div>
             <div id="slide2" className="carousel-item relative w-full">
-                <div className="container flex flex-col justify-center gap-8 p-2 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+                <div className="container flex flex-col justify-center gap-8 p-2 mx-auto lg:flex-row lg:justify-between">
                     <div className="flex flex-col justify-center text-center rounded-sm lg:text-left flex-1">
                         <h1 className="text-3xl font-bold leading-none text-secondary sm:text-6xl">Race Day Logistics and Tracking
                         </h1>
@@ -49,7 +49,7 @@ const HeroSlider = () => {
                 </div>
             </div>
             <div id="slide3" className="carousel-item relative w-full">
-                <div className="container flex flex-col justify-center gap-8 p-2 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+                <div className="container flex flex-col justify-center gap-8 p-2 mx-auto lg:flex-row lg:justify-between">
                     <div className="flex flex-col justify-center text-center rounded-sm lg:text-left flex-1">
                         <h1 className="text-3xl font-bold leading-none text-secondary sm:text-6xl">Volunteer and Staff Coordination
                         </h1>
@@ -69,7 +69,7 @@ const HeroSlider = () => {
                 </div>
             </div>
             <div id="slide4" className="carousel-item relative w-full">
-                <div className="container flex flex-col justify-center gap-8 p-2 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+                <div className="container flex flex-col justify-center gap-8 p-2 mx-auto lg:flex-row lg:justify-between">
                     <div className="flex flex-col justify-center text-center rounded-sm lg:text-left flex-1">
                         <h1 className="text-3xl font-bold leading-none text-secondary sm:text-6xl">Results and Analytics Dashboard
                         </h1>
