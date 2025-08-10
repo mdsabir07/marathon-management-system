@@ -14,6 +14,7 @@ import Loading from "../Pages/Home/Shared/Loading";
 import PrivateRoute from "../routers/PrivateRoute";
 import MarathonRegistration from "../Pages/MarathonRegistration/MarathonRegistration";
 import Error404 from "../Pages/Error404";
+import DashboardHome from "../Pages/Dashboard/DashboardHome";
 
 const router = createBrowserRouter([
     {
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
                 handle: { title: 'Dashboard - Marathon Management System' },
                 children: [
+                    {
+                        index: true,
+                        element: <PrivateRoute><DashboardHome /></PrivateRoute>,
+                        handle: { title: 'Dashboard - Marathon Management System' }
+                    },
                     {
                         path: 'add-marathons',
                         element: <PrivateRoute><AddMarathons /></PrivateRoute>,
