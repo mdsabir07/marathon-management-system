@@ -13,9 +13,9 @@ const MarathonSections = ({ children }) => {
                 const baseUrl = import.meta.env.VITE_API_URL;
 
                 const [trendingRes, featuredRes, recentRes] = await Promise.all([
-                    axios.get(`${baseUrl}/marathons?limit=3`),
+                    axios.get(`${baseUrl}/marathons?sort=marathonDate&order=asc&limit=3`),
                     axios.get(`${baseUrl}/marathons?featured=true&limit=3`),
-                    axios.get(`${baseUrl}/marathons?sort=date&order=desc&limit=3`)
+                    axios.get(`${baseUrl}/marathons?sort=createdAt&order=desc&limit=3`)
                 ]);
 
                 setTrending(trendingRes.data);
