@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { NavLink, Outlet, useMatches } from 'react-router';
+import { MdDashboard } from 'react-icons/md';
 
 const DashboardLayout = () => {
     const matchs = useMatches();
@@ -15,9 +16,16 @@ const DashboardLayout = () => {
             <div className="w-full sm:w-2/12">
                 <div className="grid gap-4">
                     <NavLink
+                        to="/dashboard"
+                        className="text-2xl font-bold flex gap-3 items-center hover:text-secondary"
+                    >
+                        <MdDashboard size={24} />
+                        Dashboard
+                    </NavLink>
+                    <NavLink
                         to="add-marathons"
                         className={({ isActive }) =>
-                            `flex items-center text-xl gap-2 p-2 rounded ${isActive ? 'bg-primary' : ''}`
+                            `flex items-center text-xl gap-2 p-2 rounded ${isActive ? 'bg-primary' : 'hover:text-secondary'}`
                         }
                     >
                         Add Marathon
@@ -25,7 +33,7 @@ const DashboardLayout = () => {
                     <NavLink
                         to="my-marathons-list"
                         className={({ isActive }) =>
-                            `flex items-center text-xl gap-2 p-2 rounded ${isActive ? 'bg-primary' : ''}`
+                            `flex items-center text-xl gap-2 p-2 rounded ${isActive ? 'bg-primary' : 'hover:text-secondary'}`
                         }
                     >
                         My Marathon List
@@ -33,7 +41,7 @@ const DashboardLayout = () => {
                     <NavLink
                         to="my-apply-list"
                         className={({ isActive }) =>
-                            `flex items-center text-xl gap-2 p-2 rounded ${isActive ? 'bg-primary' : ''}`
+                            `flex items-center text-xl gap-2 p-2 rounded ${isActive ? 'bg-primary' : 'hover:text-secondary'}`
                         }
                     >
                         My Apply List

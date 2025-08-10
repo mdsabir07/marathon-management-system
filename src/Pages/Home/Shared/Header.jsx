@@ -28,7 +28,6 @@ const Header = () => {
         <li><NavLink to="marathons" className={({ isActive }) => isActive ? "text-secondary" : "hover:text-secondary"}>Marathons</NavLink></li>
         {
             user && <>
-                <li><NavLink to="dashboard" className={({ isActive }) => isActive ? "text-secondary" : "hover:text-secondary"}>Dashboard</NavLink></li>
                 <li>
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
@@ -42,9 +41,10 @@ const Header = () => {
                             </div>
                         </div>
                         <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-md bg-gray-200 text-black rounded-box w-50 right-0">
-                            <li><NavLink to="/dashboard/add-marathons">Add marathon</NavLink></li>
-                            <li><NavLink to="/dashboard/my-marathons-list">My marathon list</NavLink></li>
-                            <li><NavLink to="/dashboard/my-apply-list">My apply list</NavLink></li>
+                            <li><NavLink to="dashboard" className={({ isActive }) => isActive ? "text-secondary" : "hover:text-secondary"}>Dashboard</NavLink></li>
+                            <li><NavLink to="/dashboard/add-marathons" className={({ isActive }) => isActive ? "text-secondary" : "hover:text-secondary"}>Add marathon</NavLink></li>
+                            <li><NavLink to="/dashboard/my-marathons-list" className={({ isActive }) => isActive ? "text-secondary" : "hover:text-secondary"}>My marathon list</NavLink></li>
+                            <li><NavLink to="/dashboard/my-apply-list" className={({ isActive }) => isActive ? "text-secondary" : "hover:text-secondary"}>My apply list</NavLink></li>
                         </ul>
                     </div>
                 </li>

@@ -25,10 +25,6 @@ const router = createBrowserRouter([
                 index: true,
                 Component: Home,
                 hydrateFallbackElement: <Loading />,
-                loader: async () => {
-                    const res = await axios.get(`${import.meta.env.VITE_API_URL}/marathons?limit=6`);
-                    return res.data;
-                },
                 handle: { title: 'Home - Marathon Management System' }
             },
             {
