@@ -38,9 +38,9 @@ const Marathons = () => {
     }, [sortBy]);
 
     return (
-        <div className="w-11/12 mx-auto py-10 sm:py-20">
-            <div className="flex justify-between items-center mb-6">
-                <h1 className="text-3xl">
+        <div className="w-11/12 mx-auto pt-20 pb-10 sm:pt-30">
+            <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-6">
+                <h1 className="text-xl sm:text-3xl">
                     Total marathons: <strong className="text-secondary">{marathons.length}</strong>
                 </h1>
                 <select

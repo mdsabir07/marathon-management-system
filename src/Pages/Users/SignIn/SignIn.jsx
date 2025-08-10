@@ -39,8 +39,8 @@ const SignIn = () => {
             })
     }
     return (
-        <div className="w-11/12 mx-auto flex justify-center items-center flex-col md:flex-row gap-5 py-10 sm:py-20">
-            <div className="w-7/12 p-8 space-y-3 shadow-sm rounded-xl dark:bg-gray-50 dark:text-gray-800">
+        <div className="w-11/12 mx-auto flex justify-center items-center flex-col md:flex-row gap-5 py-16 sm:py-30">
+            <div className="w-full sm:w-7/12 p-3 sm:p-8 space-y-3 shadow-sm rounded-xl dark:bg-gray-50 dark:text-gray-800">
                 <h1 className="text-2xl font-bold text-center">Sign In</h1>
                 <form onSubmit={handleSignIn} className="space-y-6">
                     <div className="space-y-1 text-sm">
@@ -63,7 +63,7 @@ const SignIn = () => {
                     <Link to="/register" className='text-primary hover:text-secondary text-base'><strong> Register</strong></Link>
                 </p>
             </div>
-            <div className="w-5/12">
+            <div className="w-full sm:w-5/12">
                 <Lottie style={{ width: 'full' }} animationData={LottieSignIn} loop={true} />
             </div>
         </div>

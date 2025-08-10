@@ -5,9 +5,9 @@ const MarathonCard = ({ marathon }) => {
     return (
         <div className="rounded-md shadow-md">
             <img src={marathon_img} alt="" className="object-cover object-center w-full h-[215px] sm:h-[260px] rounded-t-md dark:bg-gray-500" />
-            <div className="flex flex-col justify-between p-6 space-y-8">
+            <div className="flex flex-col justify-between p-4 sm:p-6 space-y-5 sm:space-y-8">
                 <div className="space-y-2">
-                    <h2 className="text-3xl font-semibold tracking-wide">{title}</h2>
+                    <h2 className="text-xl sm:text-3xl font-semibold tracking-wide">{title}</h2>
                     <p className="text-secondary font-semibold">📍{location}</p>
                     <p className="">
                         {description}

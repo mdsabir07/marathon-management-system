@@ -11,7 +11,7 @@ const DashboardLayout = () => {
         }
     }, [matchs])
     return (
-        <div className="flex flex-col sm:flex-row gap-5 sm:gap-8 w-11/12 mx-auto py-16 sm:py-30">
+        <div className="flex flex-col sm:flex-row gap-8 md:gap-20 sm:gap-8 w-11/12 mx-auto py-16 sm:py-30">
             {/* Sidebar */}
             <div className="w-full sm:w-2/12">
                 <div className="grid gap-4">

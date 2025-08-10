@@ -56,8 +56,8 @@ const Register = () => {
             })
     }
     return (
-        <div className="w-11/12 mx-auto flex justify-center items-center flex-col md:flex-row gap-5 py-10 sm:py-20">
-            <div className="w-7/12 p-8 space-y-3 shadow-sm rounded-xl dark:bg-gray-50 dark:text-gray-800">
+        <div className="w-11/12 mx-auto flex justify-center items-center flex-col md:flex-row gap-5 py-16 sm:py-30">
+            <div className="w-full sm:w-7/12 p-3 sm:p-8 space-y-3 shadow-sm rounded-xl dark:bg-gray-50 dark:text-gray-800">
                 <h1 className="text-2xl font-bold text-center">Register</h1>
                 <form onSubmit={handleRegister} className="space-y-6">
                     <div className="space-y-1 text-sm">
@@ -83,7 +83,7 @@ const Register = () => {
                     <Link to="/signin" className='text-primary hover:text-secondary text-base'><strong> Sing in</strong></Link>
                 </p>
             </div>
-            <div className="w-5/12">
+            <div className="w-full sm:w-5/12">
                 <Lottie style={{ width: 'full' }} animationData={LottieRegister} loop={true} />
             </div>
         </div>

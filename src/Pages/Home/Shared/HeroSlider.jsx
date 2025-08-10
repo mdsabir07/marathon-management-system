@@ -7,7 +7,7 @@ import hero4 from '../../../assets/hero4.jpg';
 const HeroSlider = () => {
 
     return (
-        <div className="carousel w-full h-[630px]">
+        <div className="carousel w-full min-h-screen">
             <div id="slide1" className="carousel-item relative w-full">
                 <div className="container flex flex-col justify-center gap-8 p-2 mx-auto lg:flex-row lg:justify-between">
                     <div className="flex flex-col justify-center text-center rounded-sm lg:text-left flex-1">
@@ -20,7 +20,7 @@ const HeroSlider = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
-                        <img src={hero1} alt="" className="w-full max-h-[438px] object-cover rounded-md" />
+                        <img src={hero1} alt="" className="w-full max-h-[220px] sm:max-h-[438px] object-cover rounded-md" />
                     </div>
                 </div>
                 <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
@@ -40,7 +40,7 @@ const HeroSlider = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
-                        <img src={hero2} alt="" className="w-full max-h-[438px] object-cover rounded-md" />
+                        <img src={hero2} alt="" className="w-full max-h-[220px] sm:max-h-[438px] object-cover rounded-md" />
                     </div>
                 </div>
                 <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
@@ -60,7 +60,7 @@ const HeroSlider = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
-                        <img src={hero3} alt="" className="w-full max-h-[438px] object-cover rounded-md" />
+                        <img src={hero3} alt="" className="w-full max-h-[220px] sm:max-h-[438px] object-cover rounded-md" />
                     </div>
                 </div>
                 <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
@@ -80,7 +80,7 @@ const HeroSlider = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-1">
-                        <img src={hero4} alt="" className="w-full max-h-[438px] object-cover rounded-md" />
+                        <img src={hero4} alt="" className="w-full max-h-[220px] sm:max-h-[438px] object-cover rounded-md" />
                     </div>
                 </div>
                 <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
